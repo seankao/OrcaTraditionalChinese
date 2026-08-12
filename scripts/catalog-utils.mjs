@@ -54,15 +54,9 @@ export function validateManifest(manifest) {
   }
   if (manifest.manifestVersion !== 1) errors.push('manifestVersion must be 1')
   if (manifest.pluginApi !== 1) errors.push('pluginApi must be 1')
-  if (typeof manifest.id !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest.id)) {
-    errors.push('id must be lowercase kebab-case')
-  }
-  if (
-    typeof manifest.publisher !== 'string' ||
-    !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest.publisher)
-  ) {
-    errors.push('publisher must be lowercase kebab-case')
-  }
+  if (manifest.id !== 'zh-tw') errors.push('id must be zh-tw')
+  if (manifest.publisher !== 'seankao') errors.push('publisher must be seankao')
+  if (manifest.name !== '繁體中文') errors.push('name must be 繁體中文')
   if (typeof manifest.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(manifest.version)) {
     errors.push('version must be semantic x.y.z')
   }

@@ -109,14 +109,25 @@ test('blocks protected plugin security copy except exact allowlisted chrome', ()
 test('validates the data-only zh-TW plugin manifest contract', () => {
   const valid = {
     manifestVersion: 1,
-    id: 'orca-traditional-chinese',
-    publisher: 'local-seank',
-    version: '0.1.0',
+    id: 'zh-tw',
+    publisher: 'seankao',
+    name: '繁體中文',
+    version: '0.2.0',
     pluginApi: 1,
     contributes: { languagePacks: [{ locale: 'zh-TW', path: 'locales/zh-TW.json' }] },
     capabilities: []
   }
   assert.deepEqual(validateManifest(valid), [])
+
+  const oldIdentity = structuredClone(valid)
+  oldIdentity.id = 'orca-traditional-chinese'
+  oldIdentity.publisher = 'local-seank'
+  oldIdentity.name = '繁體中文（台灣）'
+  oldIdentity.version = '0.1.1'
+  const identityErrors = validateManifest(oldIdentity)
+  assert.ok(identityErrors.some((error) => error.includes('id must be zh-tw')))
+  assert.ok(identityErrors.some((error) => error.includes('publisher must be seankao')))
+  assert.ok(identityErrors.some((error) => error.includes('name must be 繁體中文')))
 
   const invalid = structuredClone(valid)
   invalid.contributes.languagePacks[0].locale = 'zh'

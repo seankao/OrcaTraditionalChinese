@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
-  "id": "orca-traditional-chinese",
-  "publisher": "local-seank",
-  "name": "繁體中文（台灣）",
-  "version": "0.1.1",
+  "id": "zh-tw",
+  "publisher": "seankao",
+  "name": "繁體中文",
+  "version": "0.2.0",
   "description": "Traditional Chinese (Taiwan) translations for Orca.",
   "engines": { "orca": ">=1.4.0" },
   "pluginApi": 1,

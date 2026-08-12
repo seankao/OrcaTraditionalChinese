@@ -1,4 +1,4 @@
-# Orca 繁體中文（台灣）語言包
+# Orca 繁體中文語言包
 
 這是獨立於 Orca 安裝目錄的資料型 Language Pack，不含可執行 Plugin worker，也不要求任何 capability。
 
@@ -12,8 +12,10 @@
 
 1. Orca → Settings → Plugins → Development。
 2. 加入本版本庫完整路徑。
-3. 審查並啟用 `local-seank.orca-traditional-chinese`。
-4. Settings → Appearance → Language 選擇 `zh-TW`。
+3. 審查並啟用 `seankao.zh-tw`。
+4. Settings → Appearance → Language 選擇 `zh-TW — seankao.zh-tw`。
+
+> `v0.2.0` 起外掛身分由 `local-seank.orca-traditional-chinese` 改為 `seankao.zh-tw`。Orca 會視為新的外掛；升級時需停用舊外掛、重新啟用新外掛並重新選取一次語言。舊 `v0.1.x` tags 保留原身分，不會改寫。
 
 ## 驗證
 
