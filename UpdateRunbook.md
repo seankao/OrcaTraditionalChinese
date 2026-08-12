@@ -7,6 +7,22 @@
 5. 把已審翻譯人工合併至 `locales/zh-TW.json`。其中 `changed-source.json` 的項目不會保留在正式 catalog；若要重新加入，必須依新版英文重新審查與翻譯。再次執行同步時，尚未處理的 `changed-source.json` 記錄會保留，不會遺失舊人工譯文。
 6. 執行 `npm test && npm run validate`。
 7. 提高 `orca-plugin.json` 與 `package.json` 版本。
-8. Commit、建立 tag，再於 Orca 更新 Language Pack。
+8. Commit，建立不可移動的 annotated tag。
+9. 推送 `main` 與該 tag：
 
-禁止直接修改 Orca 安裝目錄或內建 `zh.json`。
+   ```bash
+   git push origin main
+   git push origin <tag>
+   ```
+
+10. 建立 GitHub Release，確認 `LICENSE`、`THIRD_PARTY_NOTICES.md` 與 README 的非官方聲明仍包含在發布來源中。
+11. 以固定 tag Git URL 進行乾淨安裝驗證：
+
+    ```text
+    https://github.com/seankao/OrcaTraditionalChinese.git#<tag>
+    ```
+
+12. 正式安裝驗證前，先移除同一 `seankao.zh-tw` 的 Development Plugin Path，避免開發來源覆蓋正式安裝版本。
+13. 完成 Review & enable，於 Appearance → Language 選取 `zh-TW — seankao.zh-tw`，再讀回持久化語言值並確認介面實際顯示繁體中文。
+
+禁止移動或覆寫既有 tags，也禁止直接修改 Orca 安裝目錄或內建 `zh.json`。
