@@ -1,0 +1,14 @@
+{
+  "auto.components.orca.profiles.signout.confirm.description": {
+    "previousEnglish": "You'll be signed out of Orca on this device. Your local projects and worktrees won't be affected.",
+    "english": "Artifacts and Orca Relay will be unavailable until you sign in again. Your local projects and worktrees won't be affected.",
+    "translation": "你將在此裝置上退出 Orca。本機專案和工作樹不會受到影響。",
+    "simplified": "你将在此设备上退出 Orca。本地项目和工作树不会受到影响。"
+  },
+  "worktreeJumpPalette.renderCapOverflow": {
+    "previousEnglish": "{{value0}} more - keep typing or add a filter to narrow",
+    "english": "{{value0}} more — scroll or keep typing to narrow",
+    "translation": "還有 {{value0}} 個 - 繼續輸入或新增篩選條件以縮小範圍",
+    "simplified": null
+  }
+}
