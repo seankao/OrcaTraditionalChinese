@@ -120,13 +120,18 @@ export async function main(root = process.cwd(), argv = process.argv.slice(2)) {
     path.join(root, 'work', 'changed-source.json'),
     {}
   )
+  const previousRemovedKeys = await readJsonIfPresent(
+    path.join(root, 'work', 'removed-keys.json'),
+    {}
+  )
   const result = reconcileCatalog({
     previousEnglish,
     nextEnglish,
     currentCatalog,
     simplified,
     translatablePluginChrome: new Set(allowlist),
-    previousChangedSource
+    previousChangedSource,
+    previousRemovedKeys
   })
 
   await writeJsonTransaction([

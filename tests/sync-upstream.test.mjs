@@ -98,6 +98,57 @@ test('retains the original manual translation across consecutive source changes'
   assert.deepEqual(reviewed.catalog, { prompt: '人工新版譯文' })
 })
 
+test('moves a pending changed-source translation to removed keys when upstream deletes it', () => {
+  const changed = reconcileCatalog({
+    previousEnglish: { prompt: 'Version A' },
+    nextEnglish: { prompt: 'Version B' },
+    currentCatalog: { prompt: '人工原譯文' }
+  })
+  const removed = reconcileCatalog({
+    previousEnglish: { prompt: 'Version B' },
+    nextEnglish: {},
+    currentCatalog: changed.catalog,
+    previousChangedSource: changed.changedSource
+  })
+
+  assert.deepEqual(removed.changedSource, {})
+  assert.deepEqual(removed.removedKeys, {
+    prompt: { previousEnglish: 'Version B', translation: '人工原譯文' }
+  })
+})
+
+test('retains removed-key review data across repeated syncs', () => {
+  const first = reconcileCatalog({
+    previousEnglish: { obsolete: 'Obsolete' },
+    nextEnglish: {},
+    currentCatalog: { obsolete: '舊人工譯文' }
+  })
+  const second = reconcileCatalog({
+    previousEnglish: {},
+    nextEnglish: {},
+    currentCatalog: first.catalog,
+    previousRemovedKeys: first.removedKeys
+  })
+
+  assert.deepEqual(second.removedKeys, first.removedKeys)
+})
+
+test('clears a removed-key record when upstream restores the key', () => {
+  const result = reconcileCatalog({
+    previousEnglish: {},
+    nextEnglish: { restored: 'Restored' },
+    currentCatalog: {},
+    previousRemovedKeys: {
+      restored: { previousEnglish: 'Old text', translation: '舊人工譯文' }
+    }
+  })
+
+  assert.deepEqual(result.removedKeys, {})
+  assert.deepEqual(result.todo, {
+    restored: { english: 'Restored', simplified: null, reason: 'new' }
+  })
+})
+
 test('sync retains unchanged translations and separates new changed removed and protected keys', () => {
   const previousEnglish = {
     common: { save: 'Save', cancel: 'Cancel', old: 'Old' },

@@ -25,7 +25,8 @@ export function reconcileCatalog({
   currentCatalog = {},
   simplified = {},
   translatablePluginChrome = new Set(),
-  previousChangedSource = {}
+  previousChangedSource = {},
+  previousRemovedKeys = {}
 }) {
   for (const catalog of [previousEnglish, nextEnglish, currentCatalog, simplified]) {
     assertSafeCatalogKeys(catalog)
@@ -37,10 +38,11 @@ export function reconcileCatalog({
   const retained = new Map()
   const todo = {}
   const changedSource = structuredClone(previousChangedSource)
-  const removedKeys = {}
+  const removedKeys = structuredClone(previousRemovedKeys)
   const protectedKeys = []
 
   for (const [key, english] of [...next].sort(([left], [right]) => left.localeCompare(right))) {
+    delete removedKeys[key]
     if (isProtectedPluginTranslation(key, translatablePluginChrome)) {
       delete changedSource[key]
       protectedKeys.push(key)
@@ -72,9 +74,13 @@ export function reconcileCatalog({
   }
 
   for (const [key, oldEnglish] of [...previous].sort(([left], [right]) => left.localeCompare(right))) {
-    if (!next.has(key) && current.has(key)) {
-      removedKeys[key] = { previousEnglish: oldEnglish, translation: current.get(key) }
+    if (next.has(key)) continue
+    const pending = changedSource[key]
+    const translation = current.get(key) ?? pending?.translation
+    if (translation !== undefined && translation !== null) {
+      removedKeys[key] = { previousEnglish: oldEnglish, translation }
     }
+    delete changedSource[key]
   }
 
   return {
