@@ -6,13 +6,15 @@
 
 ## 安裝
 
+需要 Orca `1.4.188` 或更新版本。
+
 ### Git URL（建議）
 
 1. 開啟 Orca → Settings → Plugins → Install plugin。
 2. 選擇 Git URL，貼上固定版本網址：
 
    ```text
-   https://github.com/seankao/OrcaTraditionalChinese.git#v0.2.0
+   https://github.com/seankao/OrcaTraditionalChinese.git#v0.3.0
    ```
 
 3. 安裝後找到「繁體中文」，選擇 Review & enable。
@@ -23,7 +25,7 @@
    zh-TW — seankao.zh-tw
    ```
 
-Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次安裝仍須手動選擇一次。安裝網址固定在不可移動的 `v0.2.0` tag，不建議直接追蹤可變動的 `main`。
+Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次安裝仍須手動選擇一次。安裝網址固定在不可移動的 `v0.3.0` tag，不建議直接追蹤可變動的 `main`。
 
 ### Release ZIP／Local folder 備援
 
@@ -39,6 +41,10 @@ Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次
 ## 從 v0.1.x 升級
 
 `v0.2.0` 起外掛身分由 `local-seank.orca-traditional-chinese` 改為 `seankao.zh-tw`。Orca 會視為新的外掛；升級時需停用舊外掛、審查並啟用新外掛，再重新選取一次語言。舊 `v0.1.x` tags 保留原身分，不會改寫。
+
+## 從 v0.2.0 升級
+
+`v0.3.0` 保持相同外掛身分 `seankao.zh-tw`，並將翻譯基準更新至 Orca `v1.4.188`。請以新的固定 tag Git URL 重新安裝；若 Orca 要求重新審查，完成 Review & enable 後確認語言仍為 `zh-TW — seankao.zh-tw`。
 
 ## 授權與第三方來源
 
@@ -71,7 +77,7 @@ npm run validate
 ## 同步指定 Orca release
 
 ```bash
-npm run sync -- --ref v1.4.180
+npm run sync -- --ref v1.4.188
 npm run draft
 npm run validate
 ```

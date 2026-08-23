@@ -1,1 +1,814 @@
-{}
+{
+  "auto.components.automations.AutomationSchedulePicker.22359b186a": {
+    "previousEnglish": "AM or PM",
+    "translation": "上午或下午"
+  },
+  "auto.components.automations.AutomationSchedulePicker.6b802ecc99": {
+    "previousEnglish": "Hour",
+    "translation": "小時"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.04d54d50ec": {
+    "previousEnglish": "orca · zsh",
+    "translation": "Orca · zsh"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.0688842445": {
+    "previousEnglish": "GH #1799",
+    "translation": "GH #1799"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.1170621527": {
+    "previousEnglish": ">",
+    "translation": ">"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.1aa8a9a24a": {
+    "previousEnglish": "Splittable terminal",
+    "translation": "可拆分的終端機"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.24fedd5a52": {
+    "previousEnglish": "login.spec.ts",
+    "translation": "login.spec.ts"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.2a7cfc82c8": {
+    "previousEnglish": "Linked to GH #1842",
+    "translation": "已連結至 GH #1842"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.304ad0dfc1": {
+    "previousEnglish": "Thinking...",
+    "translation": "思考中..."
+  },
+  "auto.components.feature.wall.FeatureTourPreview.3822d8d14b": {
+    "previousEnglish": "fix/worktree-picker-truncates",
+    "translation": "fix/worktree-picker-truncates"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.3c4adfd821": {
+    "previousEnglish": "fix login race condition",
+    "translation": "修復登入競態條件"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.40bbd92ef4": {
+    "previousEnglish": "Start",
+    "translation": "開始"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.47f16ecf34": {
+    "previousEnglish": "Ship several things at once. Each workspace keeps its branch, terminal, and agent activity together.",
+    "translation": "同時推進多項工作。每個工作區都會把分支、終端機和代理程式活動整合在一起。"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.5171768676": {
+    "previousEnglish": "orchestrating 3 agents",
+    "translation": "正在編排 3 個代理程式"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.56a0271428": {
+    "previousEnglish": "Isolated workspaces",
+    "translation": "隔離工作區"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.5d6ee181b6": {
+    "previousEnglish": "Open any workspace to return to its terminal, then split panes for tests, logs, and agents.",
+    "translation": "開啟任意工作區即可回到其終端機，然後分割窗格執行測試、記錄與代理程式。"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.6218a9014d": {
+    "previousEnglish": "pnpm playwright test",
+    "translation": "pnpm playwright test"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.6ed43cb0e0": {
+    "previousEnglish": "dashboard.spec.ts",
+    "translation": "dashboard.spec.ts"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.70aa182266": {
+    "previousEnglish": "Hand off a goal and walk away. A coordinator agent fans out and ships parallel PRs.",
+    "translation": "交付一個目標後即可放手不管。協調代理程式會拆分工作，平行交付多個 PR。"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.771d8881c2": {
+    "previousEnglish": "claude",
+    "translation": "claude"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.8279e9d95b": {
+    "previousEnglish": "Running 12 tests",
+    "translation": "12 項測試執行中"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.952d3ddd9a": {
+    "previousEnglish": "session started",
+    "translation": "工作階段已啟動"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.9c812e0d7c": {
+    "previousEnglish": "speed up CI pipeline",
+    "translation": "加速 CI 流程"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.ac51c061e2": {
+    "previousEnglish": "codex",
+    "translation": "codex"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.b1f17bcc74": {
+    "previousEnglish": "PR 1/3",
+    "translation": "PR 1/3"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.bee6b4088d": {
+    "previousEnglish": "GitHub & Linear tasks",
+    "translation": "GitHub 和 Linear 任務"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.c1f28c03b2": {
+    "previousEnglish": "Worktree picker truncates",
+    "translation": "Worktree 選擇器截斷"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.cebc7769cd": {
+    "previousEnglish": "redesign auth flow",
+    "translation": "重新設計驗證流程"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.cfdfd4d6b4": {
+    "previousEnglish": "PR 2/3",
+    "translation": "PR 2/3"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.d54aefe09e": {
+    "previousEnglish": "LIN-329",
+    "translation": "LIN-329"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.e38112b289": {
+    "previousEnglish": "refactor billing webhook",
+    "translation": "重構計費 Webhook"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.e44269e97d": {
+    "previousEnglish": "Agent orchestration",
+    "translation": "代理程式編排"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.ec4a73f5e6": {
+    "previousEnglish": "PR 3/3",
+    "translation": "PR 3/3"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.ef737dcee1": {
+    "previousEnglish": "GitHub & Linear tasks",
+    "translation": "GitHub 和 Linear 任務"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.ef8b164dd1": {
+    "previousEnglish": "review src/auth",
+    "translation": "審查 src/auth"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.f10c14dd9d": {
+    "previousEnglish": "Skip the tab-switching. Pick from your GitHub or Linear backlog and start a workspace in one click.",
+    "translation": "跳過分頁切換。從你的 GitHub 或 Linear 待辦清單中挑選，一鍵啟動工作區。"
+  },
+  "auto.components.feature.wall.FeatureTourPreview.fc0cc0b267": {
+    "previousEnglish": "GH #1842",
+    "translation": "GH #1842"
+  },
+  "auto.components.feature.wall.FeatureTourWorkspaceCard.2f33dc932b": {
+    "previousEnglish": "claude",
+    "translation": "claude"
+  },
+  "auto.components.feature.wall.FeatureTourWorkspaceCard.9220794f6a": {
+    "previousEnglish": "working",
+    "translation": "處理中"
+  },
+  "auto.components.feature.wall.FeatureTourWorkspaceCard.a23ed9da7f": {
+    "previousEnglish": "codex",
+    "translation": "codex"
+  },
+  "auto.components.GitHubItemDialog.5dddefdf58": {
+    "previousEnglish": "Open in GitHub",
+    "translation": "在 GitHub 中開啟"
+  },
+  "auto.components.new.workspace.ProjectHostSetupCombobox.empty": {
+    "previousEnglish": "No hosts are ready for this project.",
+    "translation": "此專案沒有已就緒的主機。"
+  },
+  "auto.components.new.workspace.ProjectHostSetupCombobox.placeholder": {
+    "previousEnglish": "Choose host",
+    "translation": "選擇主機"
+  },
+  "auto.components.onboarding.AgentFeatureSetupStep.97dcdc010f": {
+    "previousEnglish": "Enable capabilities",
+    "translation": "啟用功能"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.01426f3a23": {
+    "previousEnglish": "Agents can navigate sites, inspect pages, and work through browser tasks.",
+    "translation": "代理程式可瀏覽網站、檢查頁面，並完成瀏覽器任務。"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.1ecfb490ac": {
+    "previousEnglish": "Computer Use",
+    "translation": "電腦控制"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.399cf885c0": {
+    "previousEnglish": "Agent Orchestration",
+    "translation": "代理程式編排"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.77f74946f5": {
+    "previousEnglish": "Agents can message each other, take tasks, and coordinate handoffs.",
+    "translation": "代理程式可互相傳送訊息、接下任務，並協調交接。"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.c5292c409d": {
+    "previousEnglish": "Agents can inspect app windows and operate local apps when you ask.",
+    "translation": "按你的要求，代理程式可檢查應用程式視窗並操作本機應用程式。"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.ea85d9e628": {
+    "previousEnglish": "Agent Browser Use",
+    "translation": "代理程式瀏覽器操控"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.linearTicketsDescription": {
+    "previousEnglish": "Agents can use linked Linear tasks for richer ticket-aware handoffs.",
+    "translation": "代理程式可使用已連結的 Linear 任務，讓交接包含更完整的工單資訊。"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.linearTicketsSetupSummary": {
+    "previousEnglish": "Recommended for Linear workspaces; does not affect Linear connection setup.",
+    "translation": "推薦用於 Linear 工作區；不會影響 Linear 連線設定。"
+  },
+  "auto.components.onboarding.FeatureSetupChecklist.linearTicketsTitle": {
+    "previousEnglish": "Linear agent skill",
+    "translation": "Linear agent skill"
+  },
+  "auto.components.onboarding.OnboardingTourStep.3f9586c043": {
+    "previousEnglish": "Take the tour",
+    "translation": "開始導覽"
+  },
+  "auto.components.onboarding.OnboardingTourStep.60c5576353": {
+    "previousEnglish": "Exit tour",
+    "translation": "退出導覽"
+  },
+  "auto.components.onboarding.RepoStep.132425a3e3": {
+    "previousEnglish": "Clone a repo",
+    "translation": "複製儲存庫"
+  },
+  "auto.components.onboarding.RepoStep.24c7c8696c": {
+    "previousEnglish": "Clone into host path",
+    "translation": "複製到遠端路徑"
+  },
+  "auto.components.onboarding.RepoStep.27ca610db1": {
+    "previousEnglish": "Back",
+    "translation": "返回"
+  },
+  "auto.components.onboarding.RepoStep.288d8444b7": {
+    "previousEnglish": "Paste an HTTPS or SSH URL.",
+    "translation": "貼上 HTTPS 或 SSH URL。"
+  },
+  "auto.components.onboarding.RepoStep.2d20200346": {
+    "previousEnglish": "Import repositories",
+    "translation": "匯入儲存庫"
+  },
+  "auto.components.onboarding.RepoStep.2e6438dd34": {
+    "previousEnglish": "{{value0}}Found {{value1}} {{value2}} in this folder.",
+    "translation": "{{value0}}在這個資料夾中找到 {{value1}} 個 {{value2}}。"
+  },
+  "auto.components.onboarding.RepoStep.2ebbc26343": {
+    "previousEnglish": "/home/user/project",
+    "translation": "/home/user/project"
+  },
+  "auto.components.onboarding.RepoStep.3863747c56": {
+    "previousEnglish": "Add Git Project",
+    "translation": "新增 Git 專案"
+  },
+  "auto.components.onboarding.RepoStep.466108ab89": {
+    "previousEnglish": "Enter a path that exists on the selected host.",
+    "translation": "輸入所選主機上已存在的路徑。"
+  },
+  "auto.components.onboarding.RepoStep.6558d50c69": {
+    "previousEnglish": "Want to import many repos at once? Select the parent folder.",
+    "translation": "想一次匯入多個儲存庫？請選擇其父資料夾。"
+  },
+  "auto.components.onboarding.RepoStep.7932e95f68": {
+    "previousEnglish": "Clone",
+    "translation": "複製"
+  },
+  "auto.components.onboarding.RepoStep.7b679207e4": {
+    "previousEnglish": "Workspace",
+    "translation": "工作區"
+  },
+  "auto.components.onboarding.RepoStep.7ec3f48820": {
+    "previousEnglish": "/home/user",
+    "translation": "/home/user"
+  },
+  "auto.components.onboarding.RepoStep.831524961f": {
+    "previousEnglish": "Choose any local directory, git repo or not.",
+    "translation": "選擇任意本機目錄，無論是否為 git repo。"
+  },
+  "auto.components.onboarding.RepoStep.8cab104e3c": {
+    "previousEnglish": "Open a project on this host",
+    "translation": "開啟此主機上的專案"
+  },
+  "auto.components.onboarding.RepoStep.955134915e": {
+    "previousEnglish": "git@github.com:org/repo.git",
+    "translation": "git@github.com:org/repo.git"
+  },
+  "auto.components.onboarding.RepoStep.b7c4da0504": {
+    "previousEnglish": "SSH? Set hosts up in Settings",
+    "translation": "SSH？在「設定」中設定主機"
+  },
+  "auto.components.onboarding.RepoStep.c33b190ca3": {
+    "previousEnglish": "Host paths only",
+    "translation": "僅限遠端路徑"
+  },
+  "auto.components.onboarding.RepoStep.c3d9d44ca2": {
+    "previousEnglish": "Stop scan",
+    "translation": "停止掃描"
+  },
+  "auto.components.onboarding.RepoStep.c7af322fc3": {
+    "previousEnglish": "Stop scanning",
+    "translation": "停止掃描"
+  },
+  "auto.components.onboarding.RepoStep.cecd6593fa": {
+    "previousEnglish": "Scanned folder:",
+    "translation": "已掃描的資料夾："
+  },
+  "auto.components.onboarding.RepoStep.cf23006ba7": {
+    "previousEnglish": "Selected host",
+    "translation": "所選主機"
+  },
+  "auto.components.onboarding.RepoStep.e8214aa632": {
+    "previousEnglish": "Open as Folder",
+    "translation": "作為資料夾開啟"
+  },
+  "auto.components.onboarding.RepoStep.e8fdb36338": {
+    "previousEnglish": "Scanning repositories. Click to stop.",
+    "translation": "掃描儲存庫中。點擊即可停止。"
+  },
+  "auto.components.onboarding.RepoStep.f4e9c8dcf8": {
+    "previousEnglish": "Browse for a folder",
+    "translation": "瀏覽資料夾"
+  },
+  "auto.components.onboarding.use.onboarding.flow.dce4bdce5b": {
+    "previousEnglish": "Could not open SSH settings",
+    "translation": "無法開啟 SSH 設定"
+  },
+  "auto.components.onboarding.use.onboarding.flow.fd74e7558e": {
+    "previousEnglish": "Clone failed",
+    "translation": "複製失敗"
+  },
+  "auto.components.orca.profiles.management.04e7bd2a23": {
+    "previousEnglish": "Transfer",
+    "translation": "轉移"
+  },
+  "auto.components.orca.profiles.management.128c7dfe64": {
+    "previousEnglish": "Copy to",
+    "translation": "複製到"
+  },
+  "auto.components.orca.profiles.management.2c45bda8d3": {
+    "previousEnglish": "Manage profiles",
+    "translation": "管理配置檔案"
+  },
+  "auto.components.orca.profiles.management.2db945e4a0": {
+    "previousEnglish": "Copy or move projects from the active profile to another local profile.",
+    "translation": "將專案從使用中的配置檔案複製或移動到另一個本機配置檔案。"
+  },
+  "auto.components.orca.profiles.management.816ce624b6": {
+    "previousEnglish": "Project copied",
+    "translation": "專案已複製"
+  },
+  "auto.components.orca.profiles.management.8668cb2946": {
+    "previousEnglish": "No projects in this profile.",
+    "translation": "此配置檔案中沒有專案。"
+  },
+  "auto.components.orca.profiles.management.93034915ab": {
+    "previousEnglish": "Create another profile before copying projects.",
+    "translation": "複製專案前，請先建立另一個配置檔案。"
+  },
+  "auto.components.orca.profiles.management.9aa26347b3": {
+    "previousEnglish": "Project moved",
+    "translation": "專案已移動"
+  },
+  "auto.components.orca.profiles.management.df8b7d876b": {
+    "previousEnglish": "Move to",
+    "translation": "移動到"
+  },
+  "auto.components.orca.profiles.management.projectCountPlural": {
+    "previousEnglish": "{{count}} projects",
+    "translation": "{{count}} 個專案"
+  },
+  "auto.components.orca.profiles.management.projectCountSingular": {
+    "previousEnglish": "{{count}} project",
+    "translation": "{{count}} 個專案"
+  },
+  "auto.components.orca.profiles.org.members.error.conflict": {
+    "previousEnglish": "Already a member or invited.",
+    "translation": "已是成員或已被邀請。"
+  },
+  "auto.components.orca.profiles.org.members.error.failed": {
+    "previousEnglish": "Something went wrong. Please try again.",
+    "translation": "出現問題。請重試。"
+  },
+  "auto.components.orca.profiles.org.members.error.forbidden": {
+    "previousEnglish": "Your role can't do that.",
+    "translation": "你的角色無法執行此操作。"
+  },
+  "auto.components.orca.profiles.org.members.error.not.found": {
+    "previousEnglish": "That teammate is no longer in this organization.",
+    "translation": "該成員已不在此組織中。"
+  },
+  "auto.components.orca.profiles.org.members.error.own.role": {
+    "previousEnglish": "You can't change your own role.",
+    "translation": "無法更改你自己的角色。"
+  },
+  "auto.components.orca.profiles.org.members.error.reconnect": {
+    "previousEnglish": "Reconnect your profile to manage members.",
+    "translation": "請重新連線你的配置檔案以管理成員。"
+  },
+  "auto.components.orca.profiles.org.members.error.remove.self": {
+    "previousEnglish": "You can't remove yourself.",
+    "translation": "無法移除你自己。"
+  },
+  "auto.components.orca.profiles.org.members.error.unconfigured": {
+    "previousEnglish": "Organization management is unavailable in this build.",
+    "translation": "此版本不支援組織管理。"
+  },
+  "auto.components.orca.profiles.org.members.invite.placeholder": {
+    "previousEnglish": "teammate@example.com",
+    "translation": "teammate@example.com"
+  },
+  "auto.components.orca.profiles.org.members.invite.role": {
+    "previousEnglish": "Invite role",
+    "translation": "邀請角色"
+  },
+  "auto.components.orca.profiles.org.members.invite.submit": {
+    "previousEnglish": "Send",
+    "translation": "傳送"
+  },
+  "auto.components.orca.profiles.org.members.invite.title": {
+    "previousEnglish": "Invite",
+    "translation": "邀請"
+  },
+  "auto.components.orca.profiles.org.members.load.error": {
+    "previousEnglish": "Couldn't load organization members.",
+    "translation": "無法載入組織成員。"
+  },
+  "auto.components.orca.profiles.org.members.not.signed.in": {
+    "previousEnglish": "They haven't signed in to Orca yet.",
+    "translation": "他們尚未登入 Orca。"
+  },
+  "auto.components.orca.profiles.org.members.pending.revoke": {
+    "previousEnglish": "Revoke",
+    "translation": "撤銷"
+  },
+  "auto.components.orca.profiles.org.members.pending.title": {
+    "previousEnglish": "Pending invites",
+    "translation": "待處理的邀請"
+  },
+  "auto.components.orca.profiles.org.members.remove.cancel": {
+    "previousEnglish": "Cancel",
+    "translation": "取消"
+  },
+  "auto.components.orca.profiles.org.members.remove.confirm": {
+    "previousEnglish": "Remove",
+    "translation": "移除"
+  },
+  "auto.components.orca.profiles.org.members.remove.label": {
+    "previousEnglish": "Remove teammate",
+    "translation": "移除成員"
+  },
+  "auto.components.orca.profiles.org.members.retry": {
+    "previousEnglish": "Try again",
+    "translation": "重試"
+  },
+  "auto.components.orca.profiles.org.members.role.admin": {
+    "previousEnglish": "Admin",
+    "translation": "管理員"
+  },
+  "auto.components.orca.profiles.org.members.role.label": {
+    "previousEnglish": "Role",
+    "translation": "角色"
+  },
+  "auto.components.orca.profiles.org.members.role.member": {
+    "previousEnglish": "Member",
+    "translation": "成員"
+  },
+  "auto.components.orca.profiles.org.members.role.owner": {
+    "previousEnglish": "Owner",
+    "translation": "所有者"
+  },
+  "auto.components.orca.profiles.org.members.subtitle.default": {
+    "previousEnglish": "People in your organization who can collaborate on Orca.",
+    "translation": "你的組織中可以協作使用 Orca 的成員。"
+  },
+  "auto.components.orca.profiles.org.members.subtitle.named": {
+    "previousEnglish": "People in {{orgName}} who can collaborate on Orca.",
+    "translation": "{{orgName}} 中可以協作使用 Orca 的成員。"
+  },
+  "auto.components.orca.profiles.org.members.title": {
+    "previousEnglish": "Organization members",
+    "translation": "組織成員"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.agentPlural": {
+    "previousEnglish": "{{count}} active agents",
+    "translation": "{{count}} 個使用中的代理程式"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.agentSingular": {
+    "previousEnglish": "{{count}} active agent",
+    "translation": "{{count}} 個使用中的代理程式"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.browserPlural": {
+    "previousEnglish": "{{count}} browser workspaces",
+    "translation": "{{count}} 個瀏覽器工作區"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.browserSingular": {
+    "previousEnglish": "{{count}} browser workspace",
+    "translation": "{{count}} 個瀏覽器工作區"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.cancel": {
+    "previousEnglish": "Cancel",
+    "translation": "取消"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.copy.action": {
+    "previousEnglish": "Copy project",
+    "translation": "複製專案"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.copy.description": {
+    "previousEnglish": "Copy {{repoName}} to {{targetName}}. Both profiles will point at the same files with separate Orca metadata.",
+    "translation": "將 {{repoName}} 複製到 {{targetName}}。兩個配置檔案將指向相同的檔案，但使用各自獨立的 Orca 後設資料。"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.copy.title": {
+    "previousEnglish": "Copy project?",
+    "translation": "複製專案？"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.live.work": {
+    "previousEnglish": "Live work in this project",
+    "translation": "此專案中正在進行的工作"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.move.action": {
+    "previousEnglish": "Move project",
+    "translation": "移動專案"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.move.description": {
+    "previousEnglish": "Move {{repoName}} to {{targetName}}. Orca removes it from {{activeProfileName}}, keeps files in place, and relaunches into {{targetName}}.",
+    "translation": "將 {{repoName}} 移動到 {{targetName}}。Orca 會將其從 {{activeProfileName}} 中移除，保留檔案原位，並重新啟動進入 {{targetName}}。"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.move.title": {
+    "previousEnglish": "Move project?",
+    "translation": "移動專案？"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.terminalPlural": {
+    "previousEnglish": "{{count}} live terminal tabs",
+    "translation": "{{count}} 個正在執行的終端機分頁"
+  },
+  "auto.components.orca.profiles.project.transfer.confirm.terminalSingular": {
+    "previousEnglish": "{{count}} live terminal tab",
+    "translation": "{{count}} 個正在執行的終端機分頁"
+  },
+  "auto.components.orca.profiles.switch.confirm.agentPlural": {
+    "previousEnglish": "{{count}} active agents",
+    "translation": "{{count}} 個使用中的代理程式"
+  },
+  "auto.components.orca.profiles.switch.confirm.agentSingular": {
+    "previousEnglish": "{{count}} active agent",
+    "translation": "{{count}} 個使用中的代理程式"
+  },
+  "auto.components.orca.profiles.switch.confirm.browserPlural": {
+    "previousEnglish": "{{count}} browser workspaces",
+    "translation": "{{count}} 個瀏覽器工作區"
+  },
+  "auto.components.orca.profiles.switch.confirm.browserSingular": {
+    "previousEnglish": "{{count}} browser workspace",
+    "translation": "{{count}} 個瀏覽器工作區"
+  },
+  "auto.components.orca.profiles.switch.confirm.cancel": {
+    "previousEnglish": "Cancel",
+    "translation": "取消"
+  },
+  "auto.components.orca.profiles.switch.confirm.description": {
+    "previousEnglish": "Switching to {{targetName}} will relaunch Orca and reload the workspace for {{activeProfileName}}.",
+    "translation": "切換到 {{targetName}} 將重新啟動 Orca，並重新載入 {{activeProfileName}} 的工作區。"
+  },
+  "auto.components.orca.profiles.switch.confirm.live.work": {
+    "previousEnglish": "Live work in this profile",
+    "translation": "此配置檔案中正在進行的工作"
+  },
+  "auto.components.orca.profiles.switch.confirm.switch": {
+    "previousEnglish": "Switch profile",
+    "translation": "切換配置檔案"
+  },
+  "auto.components.orca.profiles.switch.confirm.target": {
+    "previousEnglish": "the selected profile",
+    "translation": "所選配置檔案"
+  },
+  "auto.components.orca.profiles.switch.confirm.terminalPlural": {
+    "previousEnglish": "{{count}} live terminal tabs",
+    "translation": "{{count}} 個正在執行的終端機分頁"
+  },
+  "auto.components.orca.profiles.switch.confirm.terminalSingular": {
+    "previousEnglish": "{{count}} live terminal tab",
+    "translation": "{{count}} 個正在執行的終端機分頁"
+  },
+  "auto.components.orca.profiles.switch.confirm.title": {
+    "previousEnglish": "Switch profiles?",
+    "translation": "切換配置檔案？"
+  },
+  "auto.components.orca.profiles.switcher.16e3681072": {
+    "previousEnglish": "New local profile",
+    "translation": "新建本機配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.4815f7d163": {
+    "previousEnglish": "Switch profile",
+    "translation": "切換配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.account": {
+    "previousEnglish": "Account",
+    "translation": "帳戶"
+  },
+  "auto.components.orca.profiles.switcher.accountSignedIn": {
+    "previousEnglish": "Signed in",
+    "translation": "已登入"
+  },
+  "auto.components.orca.profiles.switcher.accountSignedOut": {
+    "previousEnglish": "Signed out",
+    "translation": "已登出"
+  },
+  "auto.components.orca.profiles.switcher.accountSignInRequired": {
+    "previousEnglish": "Sign-in required",
+    "translation": "需要登入"
+  },
+  "auto.components.orca.profiles.switcher.accountTitle": {
+    "previousEnglish": "Orca account",
+    "translation": "Orca 帳戶"
+  },
+  "auto.components.orca.profiles.switcher.b4f9d1125d": {
+    "previousEnglish": "Local",
+    "translation": "本機"
+  },
+  "auto.components.orca.profiles.switcher.c106c674fe": {
+    "previousEnglish": "New local profile",
+    "translation": "新建本機配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.cfa59f8ad1": {
+    "previousEnglish": "Create and Switch",
+    "translation": "建立並切換"
+  },
+  "auto.components.orca.profiles.switcher.cloud.unavailable": {
+    "previousEnglish": "Orca sign-in unavailable",
+    "translation": "Orca 登入不可用"
+  },
+  "auto.components.orca.profiles.switcher.connect": {
+    "previousEnglish": "Connect profile",
+    "translation": "連線配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.create.profile.for.org": {
+    "previousEnglish": "Create profile for org",
+    "translation": "為組織建立配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.d00d853e2a": {
+    "previousEnglish": "Manage profiles",
+    "translation": "管理配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.e3b91a3d90": {
+    "previousEnglish": "Create an empty profile for separate projects and worktrees.",
+    "translation": "建立一個空配置檔案，用於分開管理專案和工作樹。"
+  },
+  "auto.components.orca.profiles.switcher.f322e1f4d6": {
+    "previousEnglish": "Profile name",
+    "translation": "配置檔案名稱"
+  },
+  "auto.components.orca.profiles.switcher.org.members": {
+    "previousEnglish": "Organization members",
+    "translation": "組織成員"
+  },
+  "auto.components.orca.profiles.switcher.organization": {
+    "previousEnglish": "Organization",
+    "translation": "組織"
+  },
+  "auto.components.orca.profiles.switcher.reconnect": {
+    "previousEnglish": "Reconnect profile",
+    "translation": "重新連線配置檔案"
+  },
+  "auto.components.orca.profiles.switcher.signIn": {
+    "previousEnglish": "Sign in to Orca",
+    "translation": "登入 Orca"
+  },
+  "auto.components.orca.profiles.switcher.signInAgain": {
+    "previousEnglish": "Sign in again",
+    "translation": "重新登入"
+  },
+  "auto.components.orca.profiles.switcher.signInWaiting": {
+    "previousEnglish": "Waiting for sign-in…",
+    "translation": "正在等待登入…"
+  },
+  "auto.components.orca.profiles.switcher.signout": {
+    "previousEnglish": "Sign out",
+    "translation": "登出"
+  },
+  "auto.components.PullRequestPage.b8c6cbb8c4": {
+    "previousEnglish": "Failed to {{value0}} PR",
+    "translation": "無法{{value0}} PR"
+  },
+  "auto.components.right.sidebar.checks.panel.content.checkDetailsLoadFailed": {
+    "previousEnglish": "Failed to load check details.",
+    "translation": "載入檢查詳情失敗。"
+  },
+  "auto.components.right.sidebar.ChecksPanel.ed3f79c031": {
+    "previousEnglish": "Review the prompt before starting an agent. After the prompt is delivered, Orca replies to the selected comments and resolves host threads when possible.",
+    "translation": "啟動代理程式前請先審查提示詞。提示詞送出後，Orca 會回覆所選的留言，並在可行時將託管平台上的討論串標示為已解決。"
+  },
+  "auto.components.settings.git.search.118c23484b": {
+    "previousEnglish": "Add Orca attribution to commits, PRs, and issues.",
+    "translation": "在提交、PR 與議題中新增 Orca attribution。"
+  },
+  "auto.components.settings.git.search.1b93c1143c": {
+    "previousEnglish": "attribution",
+    "translation": "歸因"
+  },
+  "auto.components.settings.git.search.61eab13403": {
+    "previousEnglish": "orca",
+    "translation": "orca"
+  },
+  "auto.components.settings.git.search.61f9f5d1fc": {
+    "previousEnglish": "co-author",
+    "translation": "共同作者"
+  },
+  "auto.components.settings.git.search.6bdea421bb": {
+    "previousEnglish": "pr",
+    "translation": "PR"
+  },
+  "auto.components.settings.git.search.8461c908ae": {
+    "previousEnglish": "coauthored",
+    "translation": "共同署名"
+  },
+  "auto.components.settings.git.search.af0a144bfb": {
+    "previousEnglish": "issue",
+    "translation": "議題"
+  },
+  "auto.components.settings.git.search.bc7d9f69ce": {
+    "previousEnglish": "Orca Attribution",
+    "translation": "Orca Attribution"
+  },
+  "auto.components.settings.GitPane.9838c921ed": {
+    "previousEnglish": "co-author",
+    "translation": "共同作者"
+  },
+  "auto.components.settings.GitPane.afada55042": {
+    "previousEnglish": "issue",
+    "translation": "議題"
+  },
+  "auto.components.settings.GitPane.b4ef5428a7": {
+    "previousEnglish": "pr",
+    "translation": "PR"
+  },
+  "auto.components.settings.GitPane.b5f534717a": {
+    "previousEnglish": "coauthored",
+    "translation": "共同署名"
+  },
+  "auto.components.settings.GitPane.b9b5771bb1": {
+    "previousEnglish": "attribution",
+    "translation": "署名"
+  },
+  "auto.components.settings.GitPane.d2eede4c54": {
+    "previousEnglish": "Add Orca attribution to commits, PRs, and issues.",
+    "translation": "在 commits、PR 和議題中新增 Orca attribution。"
+  },
+  "auto.components.settings.GitPane.e02ea23a32": {
+    "previousEnglish": "Orca Attribution",
+    "translation": "Orca Attribution"
+  },
+  "auto.components.settings.GitPane.e71ce09c42": {
+    "previousEnglish": "orca",
+    "translation": "orca"
+  },
+  "auto.components.settings.ReleaseChannelSection.devChannelMacOnly": {
+    "previousEnglish": "{{value0}} builds are produced only for macOS. Linux and Windows stay on Stable or RC.",
+    "translation": "{{value0}} 建置僅提供 macOS 版本。Linux 與 Windows 則維持使用 Stable 或 RC。"
+  },
+  "auto.components.settings.ReleaseChannelSection.devChannelMacOnlyAria": {
+    "previousEnglish": "{{value0}} (macOS only)",
+    "translation": "{{value0}} (僅限 macOS)"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.1c9e7a4b28": {
+    "previousEnglish": "Keep hidden",
+    "translation": "保留隱藏"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.4d7a1c9e53": {
+    "previousEnglish": "These worktrees were created outside of Orca.",
+    "translation": "這些 worktree 是在 Orca 之外建立的。"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.6f2d8c1e95": {
+    "previousEnglish": "Import all",
+    "translation": "全部匯入"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.7c4e9b2a81": {
+    "previousEnglish": "New externally-created worktrees",
+    "translation": "外部建立的新 worktree"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.8b3f2e1d74": {
+    "previousEnglish": "Import",
+    "translation": "匯入"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.d9f7b2a14c": {
+    "previousEnglish": "Collapse new externally-created worktrees for {{value0}}",
+    "translation": "摺疊 {{value0}} 外部建立的新 worktree"
+  },
+  "auto.components.sidebar.NewExternalWorktreesInboxLine.e2c4a8d91f": {
+    "previousEnglish": "Expand new externally-created worktrees for {{value0}}",
+    "translation": "展開 {{value0}} 外部建立的新 worktree"
+  },
+  "auto.components.ui.team.multi.combobox.18ec58881e": {
+    "previousEnglish": "Search teams...",
+    "translation": "搜尋團隊..."
+  },
+  "auto.components.ui.team.multi.combobox.301f2a796e": {
+    "previousEnglish": "All teams",
+    "translation": "所有團隊"
+  },
+  "auto.components.ui.team.multi.combobox.de83523bf9": {
+    "previousEnglish": "No teams match your search.",
+    "translation": "沒有符合你搜尋條件的團隊。"
+  },
+  "dashboardPopout.map.filters.canvasSummary": {
+    "previousEnglish": "{{shown}} of {{total}} agents shown",
+    "translation": "已顯示 {{total}} 個代理程式中的 {{shown}} 個"
+  },
+  "dashboardPopout.map.host.all": {
+    "previousEnglish": "All hosts",
+    "translation": "所有主機"
+  },
+  "dashboardPopout.map.hostFilter": {
+    "previousEnglish": "Host filter",
+    "translation": "主機篩選"
+  }
+}

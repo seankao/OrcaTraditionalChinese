@@ -112,7 +112,8 @@ test('validates the data-only zh-TW plugin manifest contract', () => {
     id: 'zh-tw',
     publisher: 'seankao',
     name: '繁體中文',
-    version: '0.2.0',
+    version: '0.3.0',
+    engines: { orca: '>=1.4.188' },
     pluginApi: 1,
     contributes: { languagePacks: [{ locale: 'zh-TW', path: 'locales/zh-TW.json' }] },
     capabilities: []
@@ -130,11 +131,13 @@ test('validates the data-only zh-TW plugin manifest contract', () => {
   assert.ok(identityErrors.some((error) => error.includes('name must be 繁體中文')))
 
   const invalid = structuredClone(valid)
+  invalid.engines.orca = '>=1.4.0'
   invalid.contributes.languagePacks[0].locale = 'zh'
   invalid.capabilities = [{ kind: 'network' }]
   invalid.main = 'main.mjs'
   invalid.worker = 'worker.mjs'
   const errors = validateManifest(invalid)
+  assert.ok(errors.some((error) => error.includes('engines.orca must be >=1.4.188')))
   assert.ok(errors.some((error) => error.includes('locale must be zh-TW')))
   assert.ok(errors.some((error) => error.includes('capabilities must be empty')))
   assert.ok(errors.some((error) => error.includes('must not declare main')))

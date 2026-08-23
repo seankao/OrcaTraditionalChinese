@@ -7,7 +7,7 @@
 - 專案：[`stablyai/orca`](https://github.com/stablyai/orca)
 - 授權：MIT
 - 著作權：Copyright © 2026 Lovecast Inc.
-- 本版本同步基準：`v1.4.180`，commit `0b62333cf179adbd839843456e111e2cdaf0bffd`
+- 本版本同步基準：`v1.4.188`，commit `f32ce859047a85a3ea4f507f633604dfbf596a0e`
 - 取用內容：
   - `src/renderer/src/i18n/locales/en.json`：英文來源與 key 基準
   - `src/renderer/src/i18n/locales/zh.json`：只用於產生未審 OpenCC 初稿

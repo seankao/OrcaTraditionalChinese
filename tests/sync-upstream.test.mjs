@@ -149,6 +149,34 @@ test('clears a removed-key record when upstream restores the key', () => {
   })
 })
 
+test('excludes source strings that exceed the language-pack artifact limit', () => {
+  const oversized = 'x'.repeat(8193)
+  const boundary = 'x'.repeat(8192)
+  const result = reconcileCatalog({
+    nextEnglish: { visual: { boundary, styles: oversized } },
+    currentCatalog: { visual: { boundary: '邊界內譯文', styles: oversized } },
+    previousChangedSource: {
+      'visual.styles': {
+        previousEnglish: 'old styles',
+        english: oversized,
+        translation: '舊譯文',
+        simplified: null
+      }
+    }
+  })
+
+  assert.deepEqual(result.catalog, { visual: { boundary: '邊界內譯文' } })
+  assert.deepEqual(result.todo, {})
+  assert.deepEqual(result.changedSource, {})
+  assert.deepEqual(result.excludedKeys, [
+    {
+      key: 'visual.styles',
+      reason: 'source exceeds plugin max string length',
+      sourceLength: 8193
+    }
+  ])
+})
+
 test('sync retains unchanged translations and separates new changed removed and protected keys', () => {
   const previousEnglish = {
     common: { save: 'Save', cancel: 'Cancel', old: 'Old' },

@@ -149,7 +149,8 @@ export async function main(root = process.cwd(), argv = process.argv.slice(2)) {
     [path.join(root, 'work', 'zh-TW.todo.json'), result.todo],
     [path.join(root, 'work', 'changed-source.json'), result.changedSource],
     [path.join(root, 'work', 'removed-keys.json'), result.removedKeys],
-    [path.join(root, 'work', 'protected-keys.json'), result.protectedKeys]
+    [path.join(root, 'work', 'protected-keys.json'), result.protectedKeys],
+    [path.join(root, 'work', 'excluded-keys.json'), result.excludedKeys]
   ])
 
   console.log(`Synced Orca ${ref} (${resolvedCommit})`)
@@ -158,6 +159,7 @@ export async function main(root = process.cwd(), argv = process.argv.slice(2)) {
   console.log(`Changed source: ${Object.keys(result.changedSource).length}`)
   console.log(`Removed: ${Object.keys(result.removedKeys).length}`)
   console.log(`Protected: ${result.protectedKeys.length}`)
+  console.log(`Excluded by artifact limits: ${result.excludedKeys.length}`)
   return 0
 }
 

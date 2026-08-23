@@ -24,10 +24,14 @@
 | Save | 儲存 |
 | Delete | 刪除 |
 | Remove | 移除 |
+| Account | 帳戶 |
+| Artifact / Artifacts | 成品 |
+| Publish | 發布 |
+| Share / Shared | 分享／已分享（依上下文） |
 
 ## 保留英文的開發術語
 
-預設保留 `branch`、`commit`、`pull request`、`worktree`、`workspace`；若介面空間或上下文需要中文，必須整個 namespace 統一。
+預設保留 `branch`、`commit`、`pull request`、`worktree`、`workspace`；英文術語與相鄰中文之間保留一個半形空格。若介面空間或上下文需要中文，必須整個 namespace 統一。
 
 ## 品質規則
 

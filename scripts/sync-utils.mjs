@@ -1,5 +1,6 @@
 import {
   assertSafeCatalogKeys,
+  DEFAULT_LIMITS,
   flattenCatalog,
   isProtectedPluginTranslation
 } from './catalog-utils.mjs'
@@ -40,12 +41,22 @@ export function reconcileCatalog({
   const changedSource = structuredClone(previousChangedSource)
   const removedKeys = structuredClone(previousRemovedKeys)
   const protectedKeys = []
+  const excludedKeys = []
 
   for (const [key, english] of [...next].sort(([left], [right]) => left.localeCompare(right))) {
     delete removedKeys[key]
     if (isProtectedPluginTranslation(key, translatablePluginChrome)) {
       delete changedSource[key]
       protectedKeys.push(key)
+      continue
+    }
+    if (english.length > DEFAULT_LIMITS.maxStringLength) {
+      delete changedSource[key]
+      excludedKeys.push({
+        key,
+        reason: 'source exceeds plugin max string length',
+        sourceLength: english.length
+      })
       continue
     }
     const translation = current.get(key)
@@ -88,6 +99,7 @@ export function reconcileCatalog({
     todo,
     changedSource,
     removedKeys,
-    protectedKeys
+    protectedKeys,
+    excludedKeys
   }
 }

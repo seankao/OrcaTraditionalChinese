@@ -1,0 +1,12 @@
+[
+  {
+    "key": "auto.components.feature.wall.review.animated.visual.notes.styles.db6691aa0a",
+    "reason": "source exceeds plugin max string length",
+    "sourceLength": 9691
+  },
+  {
+    "key": "auto.components.feature.wall.review.animated.visual.ship.styles.90cdcd2ecc",
+    "reason": "source exceeds plugin max string length",
+    "sourceLength": 9965
+  }
+]
