@@ -8,5 +8,13 @@
     "key": "auto.components.feature.wall.review.animated.visual.ship.styles.90cdcd2ecc",
     "reason": "source exceeds plugin max string length",
     "sourceLength": 9965
+  },
+  {
+    "key": "settings.appearance.chat.title",
+    "segments": [
+      "settings.appearance.chat.title"
+    ],
+    "reason": "source key contains \".\" which plugin catalogs reject",
+    "sourceLength": 4
   }
 ]

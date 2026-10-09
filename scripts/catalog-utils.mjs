@@ -60,8 +60,8 @@ export function validateManifest(manifest) {
   if (typeof manifest.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(manifest.version)) {
     errors.push('version must be semantic x.y.z')
   }
-  if (manifest.engines?.orca !== '>=1.4.188') {
-    errors.push('engines.orca must be >=1.4.188')
+  if (manifest.engines?.orca !== '>=1.4.223') {
+    errors.push('engines.orca must be >=1.4.223')
   }
   const packs = manifest.contributes?.languagePacks
   if (!Array.isArray(packs) || packs.length !== 1) {

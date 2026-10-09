@@ -1,8 +1,8 @@
 {
   "repository": "stablyai/orca",
-  "ref": "v1.4.188",
-  "commit": "f32ce859047a85a3ea4f507f633604dfbf596a0e",
-  "commitDate": "2026-08-22T05:56:37Z",
+  "ref": "v1.4.223",
+  "commit": "5272afeda68c2fe2bbdc3f09159c66688dc27328",
+  "commitDate": "2026-10-08T21:37:38Z",
   "englishCatalog": "src/renderer/src/i18n/locales/en.json",
   "simplifiedCatalog": "src/renderer/src/i18n/locales/zh.json"
 }

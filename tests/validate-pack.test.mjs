@@ -112,8 +112,8 @@ test('validates the data-only zh-TW plugin manifest contract', () => {
     id: 'zh-tw',
     publisher: 'seankao',
     name: '繁體中文',
-    version: '0.3.0',
-    engines: { orca: '>=1.4.188' },
+    version: '0.4.0',
+    engines: { orca: '>=1.4.223' },
     pluginApi: 1,
     contributes: { languagePacks: [{ locale: 'zh-TW', path: 'locales/zh-TW.json' }] },
     capabilities: []
@@ -137,7 +137,7 @@ test('validates the data-only zh-TW plugin manifest contract', () => {
   invalid.main = 'main.mjs'
   invalid.worker = 'worker.mjs'
   const errors = validateManifest(invalid)
-  assert.ok(errors.some((error) => error.includes('engines.orca must be >=1.4.188')))
+  assert.ok(errors.some((error) => error.includes('engines.orca must be >=1.4.223')))
   assert.ok(errors.some((error) => error.includes('locale must be zh-TW')))
   assert.ok(errors.some((error) => error.includes('capabilities must be empty')))
   assert.ok(errors.some((error) => error.includes('must not declare main')))

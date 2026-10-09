@@ -3,9 +3,9 @@
   "id": "zh-tw",
   "publisher": "seankao",
   "name": "繁體中文",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Traditional Chinese (Taiwan) translations for Orca.",
-  "engines": { "orca": ">=1.4.188" },
+  "engines": { "orca": ">=1.4.223" },
   "pluginApi": 1,
   "contributes": {
     "languagePacks": [{ "locale": "zh-TW", "path": "locales/zh-TW.json" }]

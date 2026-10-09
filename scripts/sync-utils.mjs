@@ -20,6 +20,31 @@ export function unflattenCatalog(entries) {
   return root
 }
 
+// 上游 en.json 可能用含 "." 的扁平 key，但 Orca 會整包拒絕含這種 key 的外掛 catalog，
+// 所以改記為 excluded 而不是中止同步。用 null-prototype 物件，讓 __proto__ 仍被後續檢查擋下。
+function splitDottedSourceKeys(value, segments = [], excluded = []) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return { catalog: value, excluded }
+  }
+  const catalog = Object.create(null)
+  for (const [key, child] of Object.entries(value)) {
+    const childSegments = [...segments, key]
+    if (key.includes('.')) {
+      for (const [path, leaf] of flattenCatalog(child, childSegments.join('.'))) {
+        excluded.push({
+          key: path,
+          segments: childSegments,
+          reason: 'source key contains "." which plugin catalogs reject',
+          sourceLength: leaf.length
+        })
+      }
+      continue
+    }
+    catalog[key] = splitDottedSourceKeys(child, childSegments, excluded).catalog
+  }
+  return { catalog, excluded }
+}
+
 export function reconcileCatalog({
   previousEnglish = {},
   nextEnglish,
@@ -29,11 +54,13 @@ export function reconcileCatalog({
   previousChangedSource = {},
   previousRemovedKeys = {}
 }) {
-  for (const catalog of [previousEnglish, nextEnglish, currentCatalog, simplified]) {
+  const previousSource = splitDottedSourceKeys(previousEnglish).catalog
+  const nextSource = splitDottedSourceKeys(nextEnglish)
+  for (const catalog of [previousSource, nextSource.catalog, currentCatalog, simplified]) {
     assertSafeCatalogKeys(catalog)
   }
-  const previous = flattenCatalog(previousEnglish)
-  const next = flattenCatalog(nextEnglish)
+  const previous = flattenCatalog(previousSource)
+  const next = flattenCatalog(nextSource.catalog)
   const current = flattenCatalog(currentCatalog)
   const zh = flattenCatalog(simplified)
   const retained = new Map()
@@ -41,7 +68,7 @@ export function reconcileCatalog({
   const changedSource = structuredClone(previousChangedSource)
   const removedKeys = structuredClone(previousRemovedKeys)
   const protectedKeys = []
-  const excludedKeys = []
+  const excludedKeys = [...nextSource.excluded]
 
   for (const [key, english] of [...next].sort(([left], [right]) => left.localeCompare(right))) {
     delete removedKeys[key]
@@ -94,6 +121,7 @@ export function reconcileCatalog({
     delete changedSource[key]
   }
 
+  excludedKeys.sort((left, right) => left.key.localeCompare(right.key))
   return {
     catalog: unflattenCatalog(retained),
     todo,

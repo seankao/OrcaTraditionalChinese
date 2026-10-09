@@ -177,6 +177,29 @@ test('excludes source strings that exceed the language-pack artifact limit', () 
   ])
 })
 
+test('excludes upstream source keys that contain a dot instead of aborting', () => {
+  const nextEnglish = {
+    'settings.appearance.chat.title': 'Chat',
+    settings: { appearance: { chat: { title: 'Chat' } } }
+  }
+  const result = reconcileCatalog({
+    previousEnglish: nextEnglish,
+    nextEnglish,
+    currentCatalog: { settings: { appearance: { chat: { title: '聊天' } } } }
+  })
+
+  assert.deepEqual(result.catalog, { settings: { appearance: { chat: { title: '聊天' } } } })
+  assert.deepEqual(result.todo, {})
+  assert.deepEqual(result.excludedKeys, [
+    {
+      key: 'settings.appearance.chat.title',
+      segments: ['settings.appearance.chat.title'],
+      reason: 'source key contains "." which plugin catalogs reject',
+      sourceLength: 4
+    }
+  ])
+})
+
 test('sync retains unchanged translations and separates new changed removed and protected keys', () => {
   const previousEnglish = {
     common: { save: 'Save', cancel: 'Cancel', old: 'Old' },

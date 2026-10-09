@@ -6,7 +6,7 @@
 
 ## 安裝
 
-需要 Orca `1.4.188` 或更新版本。
+需要 Orca `1.4.223` 或更新版本。
 
 ### Git URL（建議）
 
@@ -14,7 +14,7 @@
 2. 選擇 Git URL，貼上固定版本網址：
 
    ```text
-   https://github.com/seankao/OrcaTraditionalChinese.git#v0.3.0
+   https://github.com/seankao/OrcaTraditionalChinese.git#v0.4.0
    ```
 
 3. 安裝後找到「繁體中文」，選擇 Review & enable。
@@ -25,7 +25,7 @@
    zh-TW — seankao.zh-tw
    ```
 
-Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次安裝仍須手動選擇一次。安裝網址固定在不可移動的 `v0.3.0` tag，不建議直接追蹤可變動的 `main`。
+Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次安裝仍須手動選擇一次。安裝網址固定在不可移動的 `v0.4.0` tag，不建議直接追蹤可變動的 `main`。
 
 ### Release ZIP／Local folder 備援
 
@@ -45,6 +45,15 @@ Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次
 ## 從 v0.2.0 升級
 
 `v0.3.0` 保持相同外掛身分 `seankao.zh-tw`，並將翻譯基準更新至 Orca `v1.4.188`。請以新的固定 tag Git URL 重新安裝；若 Orca 要求重新審查，完成 Review & enable 後確認語言仍為 `zh-TW — seankao.zh-tw`。
+
+## 從 v0.3.0 升級
+
+`v0.4.0` 保持相同外掛身分 `seankao.zh-tw`，將翻譯基準更新至 Orca `v1.4.223`，並把 `engines.orca` 提高為 `>=1.4.223`：部分 key 在新版 Orca 改了英文語意，舊版 Orca 不應套用新版譯文。仍在使用舊版 Orca 時，請繼續使用 `v0.3.0`。升級方式與上一節相同：以新的固定 tag Git URL 重新安裝，完成 Review & enable 後確認語言仍為 `zh-TW — seankao.zh-tw`。
+
+## 已知問題
+
+- Orca `v1.4.223` 在任何外掛語言包啟用時，開啟 Tasks 的 GitHub Project roadmap 檢視可能會出錯。原因在 Orca 本身以外掛語言代碼格式化日期，修正見上游 PR [stablyai/orca#26860](https://github.com/stablyai/orca/pull/26860)（尚未合併）。需要使用 roadmap 時，請暫時切回 English。
+- 少數上游字串無法由外掛語言包提供，會維持英文：Plugin 安全審查相關文案（Orca 保護範圍），以及超過 8192 字元或 key 含 `.` 的字串。清單見 `work/protected-keys.json` 與 `work/excluded-keys.json`。
 
 ## 授權與第三方來源
 
@@ -77,7 +86,7 @@ npm run validate
 ## 同步指定 Orca release
 
 ```bash
-npm run sync -- --ref v1.4.188
+npm run sync -- --ref v1.4.223
 npm run draft
 npm run validate
 ```

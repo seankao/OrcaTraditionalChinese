@@ -810,5 +810,761 @@
   "dashboardPopout.map.hostFilter": {
     "previousEnglish": "Host filter",
     "translation": "主機篩選"
+  },
+  "auto.components.artifacts.ArtifactPublishButton.signingIn": {
+    "previousEnglish": "Signing in…",
+    "translation": "登入中…"
+  },
+  "auto.components.artifacts.ArtifactsPage.signingIn": {
+    "previousEnglish": "Signing in…",
+    "translation": "正在登入…"
+  },
+  "auto.components.CodexRestartChip.3ea91b5c07": {
+    "previousEnglish": "This Codex session is using an outdated configuration",
+    "translation": "此 Codex 工作階段正在使用過時的設定"
+  },
+  "auto.components.CodexRestartChip.7b1d20f4c8": {
+    "previousEnglish": "Keep current session",
+    "translation": "保留使用中的工作階段"
+  },
+  "auto.components.CodexRestartChip.8f0d5c92a1": {
+    "previousEnglish": "Codex setup changed",
+    "translation": "Codex 設定已變更"
+  },
+  "auto.components.CodexRestartChip.e6b7139d2a": {
+    "previousEnglish": "Restart this session to load your current Codex configuration.",
+    "translation": "重新啟動此工作階段，以載入你使用中的 Codex 設定。"
+  },
+  "auto.components.editor.CombinedDiffViewer.39e73e7181": {
+    "previousEnglish": "were excluded from this diff view.",
+    "translation": "已從此 diff 檢視中排除。"
+  },
+  "auto.components.editor.CombinedDiffViewer.689b99f8ad": {
+    "previousEnglish": "unresolved conflict",
+    "translation": "未解決的衝突"
+  },
+  "auto.components.editor.IpynbViewer.329764e9fc": {
+    "previousEnglish": "BETA",
+    "translation": "測試版"
+  },
+  "auto.components.editor.IpynbViewer.59b6cd874b": {
+    "previousEnglish": "code",
+    "translation": "程式碼"
+  },
+  "auto.components.editor.IpynbViewer.8c3b21369a": {
+    "previousEnglish": "nbformat",
+    "translation": "nbformat"
+  },
+  "auto.components.editor.IpynbViewer.ba149053d5": {
+    "previousEnglish": "markdown",
+    "translation": "Markdown"
+  },
+  "auto.components.emulator.pane.MobileEmulatorAgentSetupGuide.72736b051f": {
+    "previousEnglish": "Set up Orca CLI + skill when you want agents to drive this simulator.",
+    "translation": "當你想讓代理程式操作這個模擬器時，請設定 Orca CLI + 技能。"
+  },
+  "auto.components.emulator.pane.MobileEmulatorAgentSetupGuideSteps.3941719a56": {
+    "previousEnglish": "Checking Orca CLI before opening skill setup.",
+    "translation": "開啟技能設定前，正在檢查 Orca CLI。"
+  },
+  "auto.components.emulator.pane.MobileEmulatorAgentSetupGuideSteps.3be27641c9": {
+    "previousEnglish": "so emulator commands can run from agent shells.",
+    "translation": "以便模擬器指令可以在代理程式的 shell 中執行。"
+  },
+  "auto.components.emulator.pane.MobileEmulatorAgentSetupGuideSteps.3d34423e88": {
+    "previousEnglish": "Registering the Orca CLI",
+    "translation": "註冊 Orca CLI"
+  },
+  "auto.components.emulator.pane.MobileEmulatorAgentSetupGuideSteps.3d8dc52c93": {
+    "previousEnglish": "Registers the orca command for emulator control in agent shells.",
+    "translation": "在代理程式的 shell 中，註冊用於模擬器控制的 orca 指令。"
+  },
+  "auto.components.emulator.pane.MobileEmulatorAgentSetupGuideSteps.9b49d892e3": {
+    "previousEnglish": "Enable Orca CLI",
+    "translation": "啟用 Orca CLI"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.15986a1080": {
+    "previousEnglish": "Orca CLI is ready. Install the skill to finish setup.",
+    "translation": "Orca CLI 已就緒。安裝技能以完成設定。"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.2b519eed94": {
+    "previousEnglish": "Registered the Orca CLI in PATH.",
+    "translation": "已在 PATH 中註冊 Orca CLI。"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.4c26913def": {
+    "previousEnglish": "Still not set up. Complete both steps to enable agent control.",
+    "translation": "尚未設定完成。請完成這兩個步驟以啟用代理程式控制。"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.51074ccb05": {
+    "previousEnglish": "Failed to load CLI status.",
+    "translation": "無法載入 CLI 狀態。"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.69fb2c2289": {
+    "previousEnglish": "Enabled",
+    "translation": "已啟用"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.7c1b6bdb1e": {
+    "previousEnglish": "Enable",
+    "translation": "啟用"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.9dff3a6338": {
+    "previousEnglish": "Skill is installed. Enable the Orca CLI to finish setup.",
+    "translation": "技能已安裝。啟用 Orca CLI 以完成設定。"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.c6705092ba": {
+    "previousEnglish": "Fix PATH",
+    "translation": "修復 PATH"
+  },
+  "auto.components.emulator.pane.use.mobile.emulator.agent.setup.state.fdcca1ec75": {
+    "previousEnglish": "Registering...",
+    "translation": "正在註冊..."
+  },
+  "auto.components.feature.wall.agent.capability.setup.status.21d4f79c93": {
+    "previousEnglish": "click Install CLI & Skills to open macOS access settings",
+    "translation": "點擊安裝 CLI 與技能以開啟 macOS 存取設定"
+  },
+  "auto.components.feature.wall.agent.capability.setup.status.4c8e1f92a7": {
+    "previousEnglish": "open Orca Desktop on this Mac",
+    "translation": "在此 Mac 上開啟 Orca Desktop"
+  },
+  "auto.components.feature.wall.agent.capability.setup.status.aae94eeb52": {
+    "previousEnglish": "Click Install CLI & Skills",
+    "translation": "點擊安裝 CLI 與技能"
+  },
+  "auto.components.feature.wall.AgentCapabilitiesSetupAction.c89534cbe9": {
+    "previousEnglish": "Install CLI & Skills",
+    "translation": "安裝 CLI 與技能"
+  },
+  "auto.components.feature.wall.FeatureWallBrowserAction.c2df599513": {
+    "previousEnglish": "Install CLI & Skill",
+    "translation": "安裝 CLI 與技能"
+  },
+  "auto.components.feature.wall.FeatureWallSetupChecklist.0235b268b2": {
+    "previousEnglish": "Not done yet",
+    "translation": "尚未完成"
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.5ddc688c52": {
+    "previousEnglish": "\"{{value0}}\" has unsaved changes. Do you want to save before closing?",
+    "translation": "「{{value0}}」有未儲存的更改。要在關閉前儲存嗎？"
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.690b6fb98a": {
+    "previousEnglish": "Unsaved Changes",
+    "translation": "未儲存的更改"
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.918c2139f3": {
+    "previousEnglish": "Don't Save",
+    "translation": "不儲存"
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.b085fb58b5": {
+    "previousEnglish": "This file has unsaved changes.",
+    "translation": "此檔案有未儲存的更改。"
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.d6b563ae24": {
+    "previousEnglish": "Loading editor...",
+    "translation": "正在載入編輯器..."
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.da508bd7f5": {
+    "previousEnglish": "Save",
+    "translation": "儲存"
+  },
+  "auto.components.floating.terminal.FloatingTerminalPanel.e7bf09d4d4": {
+    "previousEnglish": "Cancel",
+    "translation": "取消"
+  },
+  "auto.components.LinuxPackageInstallRecoveryCard.3da99454c6": {
+    "previousEnglish": "Try Automatic Install Again",
+    "translation": "再次嘗試自動安裝"
+  },
+  "auto.components.NewWorkspaceComposerCard.waitForSetupBeforeAgentHelp": {
+    "previousEnglish": "Turn this on when setup installs dependencies, MCP servers, or config files the agent needs during startup.",
+    "translation": "如果設定會在啟動時安裝代理程式所需的相依套件、MCP 伺服器或設定檔案，請開啟此選項。"
+  },
+  "auto.components.onboarding.AgentStep.yoloPermissionsInfo": {
+    "previousEnglish": "Agent permission info",
+    "translation": "代理程式權限資訊"
+  },
+  "auto.components.onboarding.AgentStep.yoloPermissionsLabel": {
+    "previousEnglish": "Yolo / Dangerously skip permissions",
+    "translation": "Yolo / 跳過權限檢查（有風險）"
+  },
+  "auto.components.onboarding.AgentStep.yoloPermissionsTooltip": {
+    "previousEnglish": "Skip permission checks for agents for less interruptions",
+    "translation": "跳過代理程式的權限檢查，減少中斷"
+  },
+  "auto.components.onboarding.NotificationStep.53aaffe49a": {
+    "previousEnglish": "Notification Sound",
+    "translation": "通知聲音"
+  },
+  "auto.components.QuickOpen.344f8a48dd": {
+    "previousEnglish": "on the host running the Quick Open scan to enable fast, gitignore-aware listing:",
+    "translation": "在執行 Quick Open 掃描的主機上啟用快速、能感知 gitignore 的列表："
+  },
+  "auto.components.right.sidebar.AiVaultPanel.sessionsShownCompact": {
+    "previousEnglish": "{{value0}} shown",
+    "translation": "已顯示 {{value0}} 個"
+  },
+  "auto.components.right.sidebar.AiVaultPanel.shownRecent": {
+    "previousEnglish": "{{value0}} shown · {{value1}} recent",
+    "translation": "已顯示 {{value0}} 項 · 最近 {{value1}} 項"
+  },
+  "auto.components.right.sidebar.AiVaultPanelControls.sort": {
+    "previousEnglish": "Sort",
+    "translation": "排序"
+  },
+  "auto.components.right.sidebar.aiVaultSessionLogOpen.notAuthorized": {
+    "previousEnglish": "Couldn't open log — path not authorized.",
+    "translation": "無法開啟記錄——路徑未獲授權。"
+  },
+  "auto.components.right.sidebar.SourceControl.b715ef615b": {
+    "previousEnglish": "{{value0}} commits ahead of {{value1}}",
+    "translation": "領先 {{value1}} {{value0}} 個 commit"
+  },
+  "auto.components.right.sidebar.SourceControl.c1a8f3e204": {
+    "previousEnglish": "1 commit behind {{value0}}",
+    "translation": "落後 {{value0}} 1 個 commit"
+  },
+  "auto.components.right.sidebar.SourceControl.createPrIntentEmptyGeneratedBody": {
+    "previousEnglish": "Generated review details did not include a description. Retry Create PR.",
+    "translation": "生成的審查詳情未包含描述。重試建立 PR。"
+  },
+  "auto.components.right.sidebar.SourceControl.d2b9g4f315": {
+    "previousEnglish": "{{value0}} commits behind {{value1}}",
+    "translation": "落後 {{value1}} {{value0}} 個 commit"
+  },
+  "auto.components.right.sidebar.SourceControl.f9b2441bb6": {
+    "previousEnglish": "1 commit ahead of {{value0}}",
+    "translation": "領先 {{value0}} 1 個 commit"
+  },
+  "auto.components.right.sidebar.SourceControlAgentActionDialogForm.1bc0bdbb5e": {
+    "previousEnglish": "Launch:",
+    "translation": "啟動："
+  },
+  "auto.components.settings.artifacts.signingIn": {
+    "previousEnglish": "Signing in…",
+    "translation": "正在登入…"
+  },
+  "auto.components.settings.browser.use.search.034c5e8d7f": {
+    "previousEnglish": "enable",
+    "translation": "啟用"
+  },
+  "auto.components.settings.browser.use.search.30c74aaa1f": {
+    "previousEnglish": "path",
+    "translation": "路徑"
+  },
+  "auto.components.settings.browser.use.search.3ffafc9b95": {
+    "previousEnglish": "command",
+    "translation": "命令"
+  },
+  "auto.components.settings.browser.use.search.50f0860e18": {
+    "previousEnglish": "Enable Orca CLI",
+    "translation": "啟用 Orca CLI"
+  },
+  "auto.components.settings.browser.use.search.7e0dcb257a": {
+    "previousEnglish": "shell",
+    "translation": "Shell"
+  },
+  "auto.components.settings.browser.use.search.85fab5e12c": {
+    "previousEnglish": "cli",
+    "translation": "CLI"
+  },
+  "auto.components.settings.browser.use.search.890ddf943d": {
+    "previousEnglish": "Register the Orca CLI so agents can drive the browser.",
+    "translation": "註冊 Orca CLI，讓代理程式能夠操控瀏覽器。"
+  },
+  "auto.components.settings.browser.use.search.e56c7b55c9": {
+    "previousEnglish": "setup",
+    "translation": "設定"
+  },
+  "auto.components.settings.browser.use.search.ff05cbc344": {
+    "previousEnglish": "orca",
+    "translation": "orca"
+  },
+  "auto.components.settings.BrowserUsePane.0289434ed6": {
+    "previousEnglish": "Enabled",
+    "translation": "已啟用"
+  },
+  "auto.components.settings.BrowserUsePane.180a9abf3a": {
+    "previousEnglish": "Failed to load CLI status.",
+    "translation": "無法載入 CLI 狀態。"
+  },
+  "auto.components.settings.BrowserUsePane.702488a5f7": {
+    "previousEnglish": "Let coding agents drive this browser with your logins. Finish the three steps below.",
+    "translation": "讓程式碼代理程式使用你的登入資訊來操控此瀏覽器。請完成以下三個步驟。"
+  },
+  "auto.components.settings.BrowserUsePane.721aee31b4": {
+    "previousEnglish": "Registered the Orca CLI in PATH.",
+    "translation": "已在 PATH 中註冊 Orca CLI。"
+  },
+  "auto.components.settings.BrowserUsePane.8b3054dac7": {
+    "previousEnglish": "Registering...",
+    "translation": "註冊..."
+  },
+  "auto.components.settings.BrowserUsePane.9fca1f7f5d": {
+    "previousEnglish": "Registers the Orca CLI command so agents can orchestrate the browser from their shell.",
+    "translation": "註冊 Orca CLI 指令，讓代理程式可以從其 Shell 編排瀏覽器。"
+  },
+  "auto.components.settings.BrowserUsePane.ad8cb0ee22": {
+    "previousEnglish": "Fix PATH",
+    "translation": "修復路徑"
+  },
+  "auto.components.settings.BrowserUsePane.c6065d205d": {
+    "previousEnglish": "Enable Orca CLI",
+    "translation": "啟用 Orca CLI"
+  },
+  "auto.components.settings.BrowserUsePane.c79eff0213": {
+    "previousEnglish": "Register the Orca CLI so agents can drive the browser.",
+    "translation": "註冊 Orca CLI，讓代理程式可以操控瀏覽器。"
+  },
+  "auto.components.settings.BrowserUsePane.e9f3f3b488": {
+    "previousEnglish": "Installed at",
+    "translation": "已安裝於"
+  },
+  "auto.components.settings.CliSection.6930feda9e": {
+    "previousEnglish": "Use Orca from your terminal to open the app, manage worktrees, and interact with Orca terminals.",
+    "translation": "從你的終端機使用 Orca 來開啟應用程式、管理 worktree，並與 Orca 終端機互動。"
+  },
+  "auto.components.settings.HiddenExperimentalGroup.1014ddbfaf": {
+    "previousEnglish": "Does nothing today. Reserved as the first slot for hidden experimental options.",
+    "translation": "目前不會執行任何動作。保留作為隱藏實驗選項的第一個插槽。"
+  },
+  "auto.components.settings.HiddenExperimentalGroup.232cf83de8": {
+    "previousEnglish": "Unlisted toggles for internal testing. Nothing here is supported.",
+    "translation": "用於內部測試的未列出切換選項。此處內容一律不受支援。"
+  },
+  "auto.components.settings.HiddenExperimentalGroup.3e9e827ca5": {
+    "previousEnglish": "Hidden experimental",
+    "translation": "隱藏實驗"
+  },
+  "auto.components.settings.HiddenExperimentalGroup.d0f914a528": {
+    "previousEnglish": "Placeholder toggle",
+    "translation": "佔位符切換"
+  },
+  "auto.components.settings.MobileEmulatorAgentControlRow.2fef055608": {
+    "previousEnglish": "Registers the Orca CLI command so agents can control the active emulator from their shell.",
+    "translation": "註冊 Orca CLI 指令，讓代理程式能從其 Shell 控制使用中的模擬器。"
+  },
+  "auto.components.settings.MobileEmulatorAgentControlRow.3941719a56": {
+    "previousEnglish": "Checking Orca CLI before opening skill setup.",
+    "translation": "在開啟技能設定之前，檢查 Orca CLI。"
+  },
+  "auto.components.settings.MobileEmulatorAgentControlRow.3be27641c9": {
+    "previousEnglish": "so emulator commands can run from agent shells.",
+    "translation": "讓模擬器指令能從代理程式的 Shell 執行。"
+  },
+  "auto.components.settings.MobileEmulatorAgentControlRow.3d34423e88": {
+    "previousEnglish": "Registering the Orca CLI",
+    "translation": "註冊 Orca CLI"
+  },
+  "auto.components.settings.MobileEmulatorAgentControlRow.4f2205f3b6": {
+    "previousEnglish": "Enable Orca CLI",
+    "translation": "啟用 Orca CLI"
+  },
+  "auto.components.settings.MobileEmulatorAgentControlRow.aaf62a3dd2": {
+    "previousEnglish": "Installed at",
+    "translation": "已安裝於"
+  },
+  "auto.components.settings.MobilePane.35100bca5d": {
+    "previousEnglish": "While you're using a terminal on your phone, Orca shrinks it to fit your phone screen. When you close the app or switch away, this controls whether it stays at phone size (so interactive CLI tools don't reflow) or resizes back to your desktop. You can always use Restore this terminal or Restore all terminals on the banner to resize manually.",
+    "translation": "當你在手機上使用終端機時，Orca 會將它縮小以適應手機螢幕。當你關閉應用程式或切換到其他地方時，這項設定會決定它是保持手機尺寸（避免互動式 CLI 工具重新排版），還是恢復為桌面尺寸。你也可以隨時透過橫幅上的「恢復此終端機」或「恢復所有終端機」手動調整尺寸。"
+  },
+  "auto.components.settings.orcaAccount.signingIn": {
+    "previousEnglish": "Signing in…",
+    "translation": "正在登入…"
+  },
+  "auto.components.settings.RepositoryHooksSection.waitForSetupBeforeAgentHelp": {
+    "previousEnglish": "Turn this on when setup installs dependencies, MCP servers, or config files the agent needs during startup.",
+    "translation": "當設定會安裝代理程式啟動時所需的相依套件、MCP 伺服器或設定檔時，請開啟此選項。"
+  },
+  "auto.components.settings.shareSkills.signingIn": {
+    "previousEnglish": "Signing in…",
+    "translation": "正在登入…"
+  },
+  "auto.components.setup.guide.SetupGuideModal.28cf59fcb4": {
+    "previousEnglish": "This will hide the checklist from the sidebar",
+    "translation": "這將從側邊欄隱藏清單"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.install": {
+    "previousEnglish": "Install CLI & Skill",
+    "translation": "安裝 CLI 與技能"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.missingCli": {
+    "previousEnglish": "Orca CLI is missing.",
+    "translation": "缺少 Orca CLI。"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.missingCliAndSkill": {
+    "previousEnglish": "Orca CLI and Linear agent skill are missing.",
+    "translation": "缺少 Orca CLI 和 Linear agent skill。"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.toastInstallCliAndSkillDescription": {
+    "previousEnglish": "Install the Orca CLI and the Linear skill to enable your agents to read and edit Linear tasks.",
+    "translation": "安裝 Orca CLI 和 Linear 技能，以啟用你的代理程式讀取並編輯 Linear 任務。"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.toastInstallCliDescription": {
+    "previousEnglish": "Install the Orca CLI to enable your agents to read and edit Linear tasks.",
+    "translation": "安裝 Orca CLI，以啟用你的代理程式讀取並編輯 Linear 任務。"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.toastMissingCli": {
+    "previousEnglish": "Orca CLI is missing",
+    "translation": "缺少 Orca CLI"
+  },
+  "auto.components.sidebar.LinearAgentSkillSetupPrompt.toastMissingCliAndSkill": {
+    "previousEnglish": "Orca CLI and Linear skill are missing",
+    "translation": "缺少 Orca CLI 和 Linear 技能"
+  },
+  "auto.components.sidebar.SidebarHeader.25a95899c9": {
+    "previousEnglish": "Add Project",
+    "translation": "新增專案"
+  },
+  "auto.components.sidebar.SidebarHeader.ca6f729da2": {
+    "previousEnglish": "New workspace ({{value0}})",
+    "translation": "新建工作區（{{value0}}）"
+  },
+  "auto.components.stats.usage.overview.sections.f28ff1f852": {
+    "previousEnglish": "Recent combined Claude, Codex, and OpenCode token activity.",
+    "translation": "近期 Claude、Codex 和 OpenCode 的綜合 token 活動。"
+  },
+  "auto.components.stats.UsageOverviewPane.60002bb22f": {
+    "previousEnglish": "No local Claude, Codex, or OpenCode usage found yet. The overview will populate after the next agent session writes token logs.",
+    "translation": "暫未找到本機 Claude、Codex 或 OpenCode 用量。下次代理程式工作階段寫入 token 日誌後，概覽會自動顯示資料。"
+  },
+  "auto.components.status.bar.CaffeinateStatusSegment.auto": {
+    "previousEnglish": "Agent",
+    "translation": "代理程式"
+  },
+  "auto.components.status.bar.CaffeinateStatusSegment.off": {
+    "previousEnglish": "Off",
+    "translation": "關閉"
+  },
+  "auto.components.status.bar.CaffeinateStatusSegment.on": {
+    "previousEnglish": "On",
+    "translation": "開啟"
+  },
+  "auto.components.status.bar.CaffeinateStatusSegment.title": {
+    "previousEnglish": "Caffeinate",
+    "translation": "Caffeinate"
+  },
+  "auto.components.tab.bar.tab.create.entry.classifier.c41f8d20b7": {
+    "previousEnglish": "Search open tabs, files, URLs, agents…",
+    "translation": "搜尋已開啟的分頁、檔案、URL、代理程式…"
+  },
+  "auto.components.tab.bar.TabBarCreateEntry.0e5b7a3f16": {
+    "previousEnglish": "Search open tabs, files, URLs, agents…",
+    "translation": "搜尋已開啟的分頁、檔案、URL、代理程式…"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.54f7d6f69d": {
+    "previousEnglish": "Take back all terminals",
+    "translation": "收回所有終端機的控制權"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.7cffad954c": {
+    "previousEnglish": "Collapse",
+    "translation": "摺疊"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.a6b1d8f3e2": {
+    "previousEnglish": "Your phone session ended. Restore to desktop size for this terminal, or for all terminals your phone left at phone size.",
+    "translation": "手機工作階段已結束。可將此終端機恢復為桌面尺寸，也可恢復所有仍維持手機尺寸的終端機。"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.b3d8e1f42a": {
+    "previousEnglish": "Restore this terminal",
+    "translation": "恢復此終端機"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.c8f2e1a4b9": {
+    "previousEnglish": "Take back this terminal",
+    "translation": "收回此終端機的控制權"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.d9f3c6e2a4": {
+    "previousEnglish": "Desktop keyboard is paused. Take back this terminal to type here, take back all terminals your phone controls, or collapse to keep watching.",
+    "translation": "電腦鍵盤已暫停。收回此終端機的控制權即可輸入；也可收回手機控制的所有終端機，或摺疊面板繼續查看。"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.e8c4f2a91b": {
+    "previousEnglish": "Restore all terminals",
+    "translation": "恢復所有終端機"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.f2a8b9c1d3": {
+    "previousEnglish": "From your phone",
+    "translation": "由手機控制"
+  },
+  "auto.components.terminal.pane.MobileDriverOverlay.faa367dc74": {
+    "previousEnglish": "Your phone left this at phone size",
+    "translation": "手機已將此終端機保持為手機尺寸"
+  },
+  "auto.components.terminal.pane.TerminalErrorToast.7ee11bc0db": {
+    "previousEnglish": "Orca couldn't confirm whether this terminal's previous session is still running, so it left the session untouched. Reopen this pane to retry.",
+    "translation": "Orca 無法確認此終端機先前的工作階段是否仍在執行中，因此保留該工作階段未做變更。重新開啟此面板以重試。"
+  },
+  "auto.components.WorktreeJumpPalette.paletteOpenTabBranch": {
+    "previousEnglish": "Branch name",
+    "translation": "branch 名稱"
+  },
+  "auto.components.WorktreeJumpPalette.paletteOpenTabWorkspace": {
+    "previousEnglish": "Workspace name",
+    "translation": "workspace 名稱"
+  },
+  "auto.hooks.useComposerState.7eb3f44ff7": {
+    "previousEnglish": "Selected agent is disabled. Choose an enabled agent before creating.",
+    "translation": "所選代理程式已停用。請在建立前選擇已啟用的代理程式。"
+  },
+  "auto.hooks.useComposerState.a9ff236145": {
+    "previousEnglish": "Some attachments could not be uploaded.",
+    "translation": "部分附件無法上傳。"
+  },
+  "components.native-chat.composer.mentionHint": {
+    "previousEnglish": "Referencing file:",
+    "translation": "引用檔案："
+  },
+  "components.native-chat.composer.optionValue.off": {
+    "previousEnglish": "Off",
+    "translation": "關閉"
+  },
+  "components.native-chat.composer.optionValue.on": {
+    "previousEnglish": "On",
+    "translation": "開啟"
+  },
+  "components.native-chat.composer.valueUnknown": {
+    "previousEnglish": "Current value unknown — pick On or Off",
+    "translation": "目前既存的數值不明 — 請選擇開啟或關閉"
+  },
+  "dashboardPopout.filters.removeChip": {
+    "previousEnglish": "Remove {{filter}}",
+    "translation": "移除 {{filter}}"
+  },
+  "dashboardPopout.map.agentCount": {
+    "previousEnglish": "{{count}} agents",
+    "translation": "{{count}} 個代理程式"
+  },
+  "dashboardPopout.map.agentCount_one": {
+    "previousEnglish": "{{count}} agent",
+    "translation": "{{count}} 個代理程式"
+  },
+  "dashboardPopout.map.agentCount_other": {
+    "previousEnglish": "{{count}} agents",
+    "translation": "{{count}} 個代理程式"
+  },
+  "dashboardPopout.map.canvasLabel": {
+    "previousEnglish": "Nested project, workspace, and agent map",
+    "translation": "巢狀專案、工作區與代理程式地圖"
+  },
+  "dashboardPopout.map.empty": {
+    "previousEnglish": "No agents match the current filters.",
+    "translation": "沒有代理程式符合使用中的篩選條件。"
+  },
+  "dashboardPopout.map.filters.agentlessWorkspaces": {
+    "previousEnglish": "Workspaces without agents",
+    "translation": "沒有代理程式的工作區"
+  },
+  "dashboardPopout.map.filters.agents": {
+    "previousEnglish": "Agents",
+    "translation": "代理程式"
+  },
+  "dashboardPopout.map.filters.lifespan": {
+    "previousEnglish": "Session lifespan",
+    "translation": "工作階段存續時間"
+  },
+  "dashboardPopout.map.filters.ofTotalAgents": {
+    "previousEnglish": "of {{total}} agents shown",
+    "translation": "／共 {{total}} 個代理程式"
+  },
+  "dashboardPopout.map.filters.orchestrationLinks": {
+    "previousEnglish": "Orchestration links",
+    "translation": "編排連結"
+  },
+  "dashboardPopout.map.filters.orchestrationLinksHidden": {
+    "previousEnglish": "Orchestration links hidden",
+    "translation": "編排連結已隱藏"
+  },
+  "dashboardPopout.map.filters.quickViews": {
+    "previousEnglish": "Quick views",
+    "translation": "快速檢視"
+  },
+  "dashboardPopout.map.filters.reset": {
+    "previousEnglish": "Reset",
+    "translation": "重設"
+  },
+  "dashboardPopout.map.filters.resetRanges": {
+    "previousEnglish": "Reset ranges",
+    "translation": "重設範圍"
+  },
+  "dashboardPopout.map.filters.showStates": {
+    "previousEnglish": "Agent states",
+    "translation": "代理程式狀態"
+  },
+  "dashboardPopout.map.filters.sinceMessage": {
+    "previousEnglish": "Since last message",
+    "translation": "自上一則訊息起"
+  },
+  "dashboardPopout.map.filters.stateChip": {
+    "previousEnglish": "State: {{states}}",
+    "translation": "狀態：{{states}}"
+  },
+  "dashboardPopout.map.filters.summaryAll": {
+    "previousEnglish": "All",
+    "translation": "全部"
+  },
+  "dashboardPopout.map.filters.summaryCount": {
+    "previousEnglish": "{{shown}} of {{total}}",
+    "translation": "{{shown}} / {{total}}"
+  },
+  "dashboardPopout.map.filters.summarySelected": {
+    "previousEnglish": "{{count}} selected",
+    "translation": "已選取 {{count}} 項"
+  },
+  "dashboardPopout.map.filters.time": {
+    "previousEnglish": "Time",
+    "translation": "時間"
+  },
+  "dashboardPopout.map.filters.timeAny": {
+    "previousEnglish": "any",
+    "translation": "不限"
+  },
+  "dashboardPopout.map.filters.timeInState": {
+    "previousEnglish": "Time in current state",
+    "translation": "目前狀態持續時間"
+  },
+  "dashboardPopout.map.filters.timeMaximum": {
+    "previousEnglish": "{{label}} maximum",
+    "translation": "{{label}} 上限"
+  },
+  "dashboardPopout.map.filters.timeMinimum": {
+    "previousEnglish": "{{label}} minimum",
+    "translation": "{{label}} 最小值"
+  },
+  "dashboardPopout.map.filters.timeRangeCount": {
+    "previousEnglish": "{{count}} ranges",
+    "translation": "{{count}} 個範圍"
+  },
+  "dashboardPopout.map.filters.title": {
+    "previousEnglish": "Map controls",
+    "translation": "地圖控制項"
+  },
+  "dashboardPopout.map.filters.workspace": {
+    "previousEnglish": "Workspace",
+    "translation": "workspace"
+  },
+  "dashboardPopout.map.filters.workspaceVisibility": {
+    "previousEnglish": "Map content",
+    "translation": "地圖內容"
+  },
+  "dashboardPopout.map.fit": {
+    "previousEnglish": "Fit",
+    "translation": "縮放至符合"
+  },
+  "dashboardPopout.map.host.local": {
+    "previousEnglish": "Local",
+    "translation": "本機"
+  },
+  "dashboardPopout.map.host.remote": {
+    "previousEnglish": "Remote",
+    "translation": "遠端"
+  },
+  "dashboardPopout.map.host.ssh": {
+    "previousEnglish": "SSH",
+    "translation": "SSH"
+  },
+  "dashboardPopout.map.host.wsl": {
+    "previousEnglish": "WSL",
+    "translation": "WSL"
+  },
+  "dashboardPopout.map.liveContainmentMap": {
+    "previousEnglish": "Live containment map",
+    "translation": "即時包含關係地圖"
+  },
+  "dashboardPopout.map.noLaunchableAgents": {
+    "previousEnglish": "No enabled agents detected.",
+    "translation": "沒有偵測到已啟用的代理程式。"
+  },
+  "dashboardPopout.map.noWorkspaceAgents": {
+    "previousEnglish": "No agents in this workspace.",
+    "translation": "此工作區沒有代理程式。"
+  },
+  "dashboardPopout.map.openFolderWorkspace": {
+    "previousEnglish": "Open {{workspace}} folder workspace details",
+    "translation": "開啟 {{workspace}} 資料夾工作區詳情"
+  },
+  "dashboardPopout.map.openWorktree": {
+    "previousEnglish": "Open {{worktree}} worktree details",
+    "translation": "開啟 {{worktree}} worktree 詳情"
+  },
+  "dashboardPopout.map.projectCount": {
+    "previousEnglish": "{{agents}} agents · {{workspaces}} workspaces",
+    "translation": "{{agents}} 個代理程式 · {{workspaces}} 個工作區"
+  },
+  "dashboardPopout.map.quickView.attention": {
+    "previousEnglish": "Needs me",
+    "translation": "需要我處理"
+  },
+  "dashboardPopout.map.quickView.everything": {
+    "previousEnglish": "Everything",
+    "translation": "全部"
+  },
+  "dashboardPopout.map.quickView.longRunning": {
+    "previousEnglish": "Long runners",
+    "translation": "長時間執行的代理程式"
+  },
+  "dashboardPopout.map.quickView.orchestration": {
+    "previousEnglish": "Orchestration",
+    "translation": "編排"
+  },
+  "dashboardPopout.map.quickView.recent": {
+    "previousEnglish": "Last 30 min",
+    "translation": "最近 30 分鐘"
+  },
+  "dashboardPopout.map.quickView.stale": {
+    "previousEnglish": "Stale > 3d",
+    "translation": "超過 3 天未更新"
+  },
+  "dashboardPopout.map.quickView.stuck": {
+    "previousEnglish": "Stuck",
+    "translation": "卡住"
+  },
+  "dashboardPopout.map.quickView.unread": {
+    "previousEnglish": "Unread",
+    "translation": "未讀"
+  },
+  "dashboardPopout.map.runningAgents": {
+    "previousEnglish": "Agents",
+    "translation": "代理程式"
+  },
+  "dashboardPopout.map.sleepWorkspace": {
+    "previousEnglish": "Sleep",
+    "translation": "休眠"
+  },
+  "dashboardPopout.map.spawnAgent": {
+    "previousEnglish": "Start a new agent",
+    "translation": "新建代理程式"
+  },
+  "dashboardPopout.map.status.doneSeen": {
+    "previousEnglish": "Done, seen",
+    "translation": "已完成、已檢視"
+  },
+  "dashboardPopout.map.worktreeSummary": {
+    "previousEnglish": "{{total}} agents · {{active}} active · {{done}} done",
+    "translation": "{{total}} 個代理程式 · {{active}} 個使用中 · {{done}} 個已完成"
+  },
+  "dashboardPopout.map.worktreeSummary_one": {
+    "previousEnglish": "{{total}} agent · {{active}} active · {{done}} done",
+    "translation": "{{total}} 個代理程式 · {{active}} 個使用中 · {{done}} 個已完成"
+  },
+  "dashboardPopout.map.worktreeSummary_other": {
+    "previousEnglish": "{{total}} agents · {{active}} active · {{done}} done",
+    "translation": "{{total}} 個代理程式 · {{active}} 個使用中 · {{done}} 個已完成"
+  },
+  "dashboardPopout.map.zoomIn": {
+    "previousEnglish": "Zoom in",
+    "translation": "放大"
+  },
+  "dashboardPopout.map.zoomOut": {
+    "previousEnglish": "Zoom out",
+    "translation": "縮小"
+  },
+  "dashboardPopout.view.board": {
+    "previousEnglish": "Dashboard",
+    "translation": "儀表板"
+  },
+  "dashboardPopout.view.label": {
+    "previousEnglish": "Dashboard view",
+    "translation": "儀表板檢視"
+  },
+  "dashboardPopout.view.map": {
+    "previousEnglish": "Agent Map",
+    "translation": "代理程式地圖"
   }
 }
