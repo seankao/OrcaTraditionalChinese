@@ -3,7 +3,7 @@ import path from 'node:path'
 import process from 'node:process'
 import { pathToFileURL } from 'node:url'
 
-import { validateCatalog, validateManifest } from './catalog-utils.mjs'
+import { validateCatalog, validateManifest, validateMarketplace } from './catalog-utils.mjs'
 
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, 'utf8'))
@@ -14,12 +14,14 @@ export async function main(root = process.cwd()) {
   const catalogPath = path.join(root, 'locales', 'zh-TW.json')
   const englishPath = path.join(root, 'upstream', 'en.json')
   const allowlistPath = path.join(root, 'config', 'translatable-plugin-chrome.json')
+  const marketplacePath = path.join(root, 'orca-marketplace.json')
 
-  const [manifest, rawCatalog, english, allowlist] = await Promise.all([
+  const [manifest, rawCatalog, english, allowlist, marketplace] = await Promise.all([
     readJson(manifestPath),
     fs.readFile(catalogPath, 'utf8'),
     readJson(englishPath),
-    readJson(allowlistPath)
+    readJson(allowlistPath),
+    readJson(marketplacePath)
   ])
   const catalog = JSON.parse(rawCatalog)
   const manifestErrors = validateManifest(manifest)
@@ -29,7 +31,7 @@ export async function main(root = process.cwd()) {
     rawBytes: Buffer.byteLength(rawCatalog, 'utf8'),
     translatablePluginChrome: new Set(allowlist)
   })
-  const errors = [...manifestErrors, ...validation.errors]
+  const errors = [...manifestErrors, ...validateMarketplace(marketplace, manifest), ...validation.errors]
   const stats = validation.stats
 
   console.log(`locale: zh-TW`)

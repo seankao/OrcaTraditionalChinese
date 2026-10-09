@@ -80,6 +80,71 @@ export function validateManifest(manifest) {
   return errors
 }
 
+export const MARKETPLACE_SOURCE_URL = 'https://github.com/seankao/OrcaTraditionalChinese.git'
+const MARKETPLACE_OWNER_RE = /^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?$/
+const MARKETPLACE_CATEGORY_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const UNSUPPORTED_MARKETPLACE_CATEGORIES = new Set(['themes', 'icons', 'icon-themes', 'terminal-themes', 'skills'])
+
+function unexpectedKeys(value, allowed) {
+  return Object.keys(value).filter((key) => !allowed.includes(key))
+}
+
+export function validateMarketplace(marketplace, manifest) {
+  if (!marketplace || typeof marketplace !== 'object' || Array.isArray(marketplace)) {
+    return ['marketplace must be a JSON object']
+  }
+  const errors = []
+  for (const key of unexpectedKeys(marketplace, ['name', 'owner', 'plugins'])) {
+    errors.push(`marketplace has unexpected key ${key}`)
+  }
+  if (typeof marketplace.name !== 'string' || marketplace.name.length === 0 || marketplace.name.length > 256) {
+    errors.push('marketplace name must be 1-256 characters')
+  }
+  if (typeof marketplace.owner !== 'string' || !MARKETPLACE_OWNER_RE.test(marketplace.owner)) {
+    errors.push('marketplace owner is invalid')
+  }
+  const plugins = marketplace.plugins
+  if (!Array.isArray(plugins) || plugins.length !== 1) {
+    return [...errors, 'marketplace must list exactly one plugin']
+  }
+  const entry = plugins[0]
+  for (const key of unexpectedKeys(entry, ['id', 'source', 'description', 'categories'])) {
+    errors.push(`marketplace entry has unexpected key ${key}`)
+  }
+  if (entry.id !== `${manifest.publisher}.${manifest.id}`) {
+    errors.push('marketplace entry id must match the manifest identity')
+  }
+  const source = entry.source ?? {}
+  for (const key of unexpectedKeys(source, ['kind', 'url', 'ref'])) {
+    errors.push(`marketplace source has unexpected key ${key}`)
+  }
+  if (source.kind !== 'git') errors.push('marketplace source kind must be git')
+  if (source.url !== MARKETPLACE_SOURCE_URL) {
+    errors.push(`marketplace source url must be ${MARKETPLACE_SOURCE_URL}`)
+  }
+  // Orca 從 main 讀這份檔案，「檢查更新」裝的是 ref 指向的版本；ref 沒跟著版本號走，
+  // 使用者按更新只會重裝舊版，而且不會有任何錯誤。
+  if (source.ref !== `v${manifest.version}`) {
+    errors.push(`marketplace source ref must be v${manifest.version}`)
+  }
+  if (entry.description !== undefined && (typeof entry.description !== 'string' || entry.description.length === 0 || entry.description.length > 4096)) {
+    errors.push('marketplace description must be 1-4096 characters')
+  }
+  const categories = entry.categories ?? []
+  if (!Array.isArray(categories) || categories.length > 16 || new Set(categories).size !== categories.length) {
+    errors.push('marketplace categories must be at most 16 unique slugs')
+  } else {
+    for (const category of categories) {
+      if (typeof category !== 'string' || !MARKETPLACE_CATEGORY_RE.test(category)) {
+        errors.push(`marketplace category ${category} must be a lowercase slug`)
+      } else if (UNSUPPORTED_MARKETPLACE_CATEGORIES.has(category)) {
+        errors.push(`marketplace category ${category} hides the listing in Orca`)
+      }
+    }
+  }
+  return errors
+}
+
 export function isProtectedPluginTranslation(path, translatablePluginChrome = new Set()) {
   const prefix = 'auto.components.settings.'
   if (!path.startsWith(prefix) || translatablePluginChrome.has(path)) return false

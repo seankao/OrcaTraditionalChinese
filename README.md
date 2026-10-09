@@ -8,28 +8,44 @@
 
 需要 Orca `1.4.223` 或更新版本。
 
-### Git URL（建議）
+### Marketplace（建議，可在介面檢查更新）
 
-1. 開啟 Orca → Settings → Plugins → Install plugin。
-2. 選擇 Git URL，貼上固定版本網址：
+1. 開啟 Orca → Settings → Plugins，在市集畫面選擇「管理來源」或「新增市集」。
+2. 在 Marketplace sources 對話框填入以下內容，選擇 Add source：
 
-   ```text
-   https://github.com/seankao/OrcaTraditionalChinese.git#v0.4.0
-   ```
+   | 欄位 | 值 |
+   |---|---|
+   | Git URL | `https://github.com/seankao/OrcaTraditionalChinese.git` |
+   | Git ref | `main` |
 
-3. 安裝後找到「繁體中文」，選擇 Review & enable。
-4. 確認審查畫面顯示 Declarative、沒有 background worker，且沒有 Orca API capability，再啟用外掛。
+3. 回到市集清單找到 `seankao.zh-tw`，選擇 Install，在預覽畫面確認只有 1 個 language pack、沒有 background worker，再選擇 Install plugin。
+4. 安裝後找到「繁體中文」，選擇 Review & enable；確認審查畫面顯示 Declarative、沒有 background worker，且沒有 Orca API capability，再啟用外掛。
 5. 開啟 Settings → Appearance → Language，選擇：
 
    ```text
    zh-TW — seankao.zh-tw
    ```
 
-Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次安裝仍須手動選擇一次。安裝網址固定在不可移動的 `v0.4.0` tag，不建議直接追蹤可變動的 `main`。
+`main` 上的 `orca-marketplace.json` 只記錄目前最新的固定版本 tag，實際安裝的永遠是不可移動的 tag 內容。Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次安裝仍須手動選擇一次。
+
+### Git URL
+
+不想加入市集來源時，也可以直接以固定版本網址安裝：
+
+1. 開啟 Orca → Settings → Plugins → Install plugin。
+2. 選擇 Git URL，貼上：
+
+   ```text
+   https://github.com/seankao/OrcaTraditionalChinese.git#v0.4.0
+   ```
+
+3. 依上一節第 4～5 步審查、啟用並選取語言。
+
+以 Git URL 安裝的外掛，市集清單只會顯示 Installed，不會出現 Check for update。
 
 ### Release ZIP／Local folder 備援
 
-若目前 Orca 版本無法使用 Git URL：
+若目前 Orca 版本無法使用 Git：
 
 1. 從 [GitHub Releases](https://github.com/seankao/OrcaTraditionalChinese/releases) 下載固定版本 ZIP 並解壓縮。
 2. Orca → Settings → Plugins → Install plugin → Local folder。
@@ -37,6 +53,14 @@ Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次
 4. 依上述流程審查、啟用，並在 Appearance → Language 手動選取 `zh-TW — seankao.zh-tw`。
 
 > 一般使用者不需加入 Development Plugin Path。同一個 `seankao.zh-tw` 不應同時由正式安裝與 Development Path 載入；Development Path 會優先於正式安裝，造成測試結果不代表已安裝版本。
+
+## 更新
+
+Orca 目前沒有外掛自動更新，更新都要手動觸發。
+
+- **Marketplace 安裝**：在市集畫面選擇「重新整理」，再於 `seankao.zh-tw` 選擇 Check for update。預覽畫面會顯示新版本，選擇 Update plugin 後重新完成 Review & enable。
+- **Git URL 安裝**：不需要先移除。以新版本的固定 tag Git URL 再安裝一次，Orca 會原地換成新版本，並保留上一版供 Roll back。完成 Review & enable 後確認語言仍為 `zh-TW — seankao.zh-tw`。
+- **從 Git URL 改用 Marketplace**：Orca 不會把既有的 Git URL 安裝轉成市集安裝。請先在已安裝清單移除「繁體中文」，再依 Marketplace 流程安裝，並重新選取一次語言。
 
 ## 從 v0.1.x 升級
 
@@ -48,7 +72,7 @@ Orca 不會因作業系統是繁體中文就自動選取外部語言包，首次
 
 ## 從 v0.3.0 升級
 
-`v0.4.0` 保持相同外掛身分 `seankao.zh-tw`，將翻譯基準更新至 Orca `v1.4.223`，並把 `engines.orca` 提高為 `>=1.4.223`：部分 key 在新版 Orca 改了英文語意，舊版 Orca 不應套用新版譯文。仍在使用舊版 Orca 時，請繼續使用 `v0.3.0`。升級方式與上一節相同：以新的固定 tag Git URL 重新安裝，完成 Review & enable 後確認語言仍為 `zh-TW — seankao.zh-tw`。
+`v0.4.0` 保持相同外掛身分 `seankao.zh-tw`，將翻譯基準更新至 Orca `v1.4.223`，並把 `engines.orca` 提高為 `>=1.4.223`：部分 key 在新版 Orca 改了英文語意，舊版 Orca 不應套用新版譯文。仍在使用舊版 Orca 時，請繼續使用 `v0.3.0`。升級方式見「更新」一節。
 
 ## 已知問題
 

@@ -1,0 +1,16 @@
+{
+  "name": "Orca 繁體中文",
+  "owner": "seankao",
+  "plugins": [
+    {
+      "id": "seankao.zh-tw",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/seankao/OrcaTraditionalChinese.git",
+        "ref": "v0.4.0"
+      },
+      "description": "Traditional Chinese (Taiwan) translations for Orca.",
+      "categories": ["languages"]
+    }
+  ]
+}

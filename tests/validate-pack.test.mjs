@@ -4,7 +4,8 @@ import assert from 'node:assert/strict'
 import {
   interpolationTokens,
   validateCatalog,
-  validateManifest
+  validateManifest,
+  validateMarketplace
 } from '../scripts/catalog-utils.mjs'
 
 test('accepts a nested string catalog with matching source keys', () => {
@@ -142,4 +143,37 @@ test('validates the data-only zh-TW plugin manifest contract', () => {
   assert.ok(errors.some((error) => error.includes('capabilities must be empty')))
   assert.ok(errors.some((error) => error.includes('must not declare main')))
   assert.ok(errors.some((error) => error.includes('must not declare worker')))
+})
+
+test('validates the marketplace index against the manifest version and identity', () => {
+  const manifest = { publisher: 'seankao', id: 'zh-tw', version: '0.4.0' }
+  const valid = {
+    name: 'Orca 繁體中文',
+    owner: 'seankao',
+    plugins: [{
+      id: 'seankao.zh-tw',
+      source: {
+        kind: 'git',
+        url: 'https://github.com/seankao/OrcaTraditionalChinese.git',
+        ref: 'v0.4.0'
+      },
+      description: 'Traditional Chinese (Taiwan) translations for Orca.',
+      categories: ['languages']
+    }]
+  }
+  assert.deepEqual(validateMarketplace(valid, manifest), [])
+
+  const invalid = structuredClone(valid)
+  invalid.plugins[0].id = 'seankao.other'
+  invalid.plugins[0].source.ref = 'v0.3.0'
+  invalid.plugins[0].source.url = 'http://example.com/repo.git'
+  invalid.plugins[0].categories = ['Languages', 'themes']
+  invalid.plugins[0].extra = true
+  const errors = validateMarketplace(invalid, manifest)
+  assert.ok(errors.some((error) => error.includes('must match the manifest identity')))
+  assert.ok(errors.some((error) => error.includes('ref must be v0.4.0')))
+  assert.ok(errors.some((error) => error.includes('source url must be')))
+  assert.ok(errors.some((error) => error.includes('Languages must be a lowercase slug')))
+  assert.ok(errors.some((error) => error.includes('themes hides the listing')))
+  assert.ok(errors.some((error) => error.includes('unexpected key extra')))
 })
